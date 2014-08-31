@@ -6,13 +6,14 @@
     <meta name="description" content="koduj">
     <meta name="author" content="Zespół Koduj.com">
     <title>Koduj.com</title>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"/>
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"/> -->
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
 </head>
 
 <body ng-controller="AppCtrl">
     <h1>Koduj.com</h1>
-    
+
+<!-- Pasek NAWIGACJI -->
     <header>
         <div id="logo"></div>
         
@@ -23,22 +24,118 @@
                 <li id="nav-dlaczego-warto"><a href="#dlaczego_warto">dlaczego warto</a></li>
             </ul>
         </nav>
-        
     </header>
     
-    <section id="intro"></section>
+<!-- Sekcja z wprowadzającym KLIPEM VIDEO -->
+    <section id="intro">
+        <div class="section_text">
+            <h1>Programowanie to przyszłość</h1>
+            <h2>Zacznij już dziś!</h2>
+        </div>
+    </section>
     
-    <section id="ucz_sie"></section>
-    
-    <section id="ucz_innych"></section>
-    
-    <section id="dlaczego_warto"></section>
-    
-    <section id="badz_jak_oni"></section>
-    
-    <section id="wspieraja_nas"></section>
-    
-    <footer></footer>
+<!-- Sekcja UCZ SIĘ -->
+    <section id="ucz_sie">
+        <div class="section_text">
+            <h2>Ucz się</h2>
+            <p>Morbi scelerisque vel felis dignissim gravida. In sodales commodo magna a egestas. Praesent et orci ac ligula egestas cursus. Proin rutrum vehicula pharetra. Aenean at dignissim lectus. Vestibulum ultrices laoreet libero, sed euismod risus ultrices eu.</p>
+        </div>
+        
+        <div class="section_tiles">
+            <div id="ucz_sie_online">
+                <h2>ucz się online</h2>
+            </div>
+            
+            <div id="ucz_sie_w_grupie">
+                <h2>ucz się w grupie</h2>
+            </div>
+        </div>
+    </section>
+
+<!-- Sekcja UCZ INNYCH -->
+    <section id="ucz_innych">
+        <div class="section_text">
+            <h2>Ucz innych</h2>
+            <p>Donec elementum nulla quis justo vestibulum gravida. Vivamus a est sollicitudin, luctus libero quis, ultrices metus. Morbi elementum tellus eget tortor sodales rhoncus. Pellentesque mollis at enim ut tempus. Donec laoreet nec libero ut mollis.</p>
+        </div>
+        
+        <div class="section_tiles">
+            <div id="zaloz_klub_kodowania">
+                <h2>załóż klub kodowania</h2>
+            </div>
+            <div id="zorganizuj_warsztaty">
+                <h2>zorganizuj warsztaty</h2>
+            </div>
+        </div>
+    </section>
+
+<!-- Sekcja DLACZEGO WARTO -->
+    <section id="dlaczego_warto">
+        <div class="section_text">
+            <h2>Dlaczego warto?</h2>    
+        </div>
+        
+        <div id="dlaczego_section_tiles">
+            <div id="trzeci_jezyk">
+                <h3>Kodowanie to trzeci język</h3>
+            </div>
+            
+            <div id="polska_potrzebuje">
+                <h3>Polska potrzebuje programistów</h3>
+            </div>
+            
+            <div id="dosyc_biernej">
+                <h3>dosyć biernej konsumpcji</h3>
+            </div>
+        </div>
+    </section>
+
+<!-- Sekcja BĄDŹ JAK ONI -->
+    <section id="badz_jak_oni">
+        <h2>Bądź jak oni!</h2>
+    </section>
+
+<!-- SPONSORZY -->
+    <section id="wspieraja_nas">
+        
+    </section>
+
+<!-- STOPKA STRONY -->
+    <footer>
+        <div id="footer_top">
+            <div id="footer_logo"></div>
+            
+            <div id="social">
+                <span id="znajdziesz_nas">
+                    <h5>znajdziesz nas wszędzie</h5>
+                </span>
+                
+                <span id="facebook">
+                    <a href=""><img src="" alt="Facebook"/></a>
+                </span>
+                
+                <span id="twitter">
+                    <a href=""><img src="" alt="Twitter"></a>
+                </span>
+                
+                <span id="youtube">
+                    <a href=""><img src="" alt="You Tube"></a>
+                </span>
+                
+                <span id="pinterest">
+                    <a href=""><img src="" alt="Pinterest"></a>
+                </span>
+                
+                <span id="google_plus">
+                    <a href=""><img src="" alt="Google Plus"></a>
+                </span>
+            </div>
+            
+                 
+        </div>
+        
+        <div id="footer_bottom"></div>
+    </footer>
     
 </body>
 </html>
