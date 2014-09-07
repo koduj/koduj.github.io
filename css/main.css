@@ -1,0 +1,87 @@
+body {
+    font-family: 'Arimo', sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: white;
+}
+
+.content {
+    width: 1120px;
+    margin: 0 auto;
+}
+
+header {
+    width: 100%;
+    height: 99px;
+    background-color: #7bcc3f;
+    position: fixed;
+    z-index: 1;
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+
+header #top {
+    width: 100%;
+    height: 8px;
+    background-color: #2a2a2a;
+}
+
+#intro {
+    width: 100%;
+    height: 560px;
+    padding-top: 99px;
+}
+
+#learn {
+    width: 100%;
+    height: 706px;
+    background-image: url('../assets/background.png');
+    background-repeat: repeat;
+}
+
+#teach {
+    width: 100%;
+    height: 702px;
+}
+
+#why {
+    width: 100%;
+    height: 490px;
+    background-image: url('../assets/background.png');
+    background-repeat: repeat;
+}
+
+#be_like_them {
+    width: 100%;
+    height: 811px;
+    background-image: url('../assets/background.png');
+    background-repeat: repeat;
+}
+
+#support {
+    width: 100%;
+    height: 170px;
+}
+
+footer {
+    width: 100%;
+    height: 169px;
+    background-color: #2a2a2a
+}
+
+main {
+    font-family: 'Arimo', sans-serif;
+    font-weight: 700;
+    font-size: 18pt;
+    text-align: center;
+    color: black;
+}
+
+aside {
+    font-family: 'Arimo', sans-serif;
+    font-weight: 400;
+    font-size: 17pt;
+    text-align: center;
+    color: black;
+}
