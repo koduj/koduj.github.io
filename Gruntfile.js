@@ -21,7 +21,7 @@ module.exports = function (grunt) {
         // grunt-watch will monitor the projects files
         watch: {
             all: {
-                files: ['*.html','**/*.css', '**/*.js', '*.md'],
+                files: ['*.html','**/*.css', '**/*.js', '*.md', '**/*.md'],
                 options: {
                     livereload: true
                 }
