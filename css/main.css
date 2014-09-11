@@ -72,16 +72,104 @@ footer {
 
 main {
     font-family: 'Arimo', sans-serif;
+    font-weight: 400;
+    font-size: 26pt;
+    text-align: center;
+    color: black;
+    padding-top: 137px;
+}
+
+.content #tagline {
+    font-family: 'Arimo', sans-serif;
     font-weight: 700;
+    font-size: 30pt;
+    text-align: center;
+    color: black;
+    margin-top: 240px;
+}
+
+.content aside {
+    font-family: 'Arimo', sans-serif;
+    font-weight: 400;
     font-size: 18pt;
     text-align: center;
     color: black;
+    margin-top: 10px;
+    margin-bottom: 90px;
 }
 
-aside {
+#learn figure {
+    width: 543px; 
+    height: 297px;
+    float: left;
+}
+
+#learn #online {
+    margin-right: 34px;
+}
+
+#teach figure {
+    width: 543px; 
+    height: 297px;
+    float: left;
+}
+
+#teach #club {
+    margin-right: 34px;
+}
+
+#why .content figure {
+    width: 348px; 
+    height: 308px;
+    float: left;
+}
+
+#why #language {
+    margin-right: 34px;
+    margin-top: 60px;
+}
+
+#why #poland {
+    margin-right: 34px;
+    margin-top: 60px;
+}
+
+#why #consumption {
+    margin-top: 60px;
+}
+
+.content figcaption {
     font-family: 'Arimo', sans-serif;
     font-weight: 400;
-    font-size: 17pt;
+    font-size: 18pt;
     text-align: center;
-    color: black;
+    color: white;
+}
+
+#online {
+    background-color: #ef3d6c;
+}
+
+#group {
+    background-color: #ba5ca3;
+}
+
+#club {
+    background-color: #7cd23c;
+}
+
+#workshops {
+    background-color: #6a9fa7;
+}
+
+#language {
+    background-color: #7da2b9;
+}
+
+#poland {
+    background-color: #bf5b9d;
+}
+
+#consumption {
+    background-color: #e0cc5e;
 }

@@ -10,6 +10,31 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"/>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
     <title>Koduj.com</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    
+    <script>
+// Scrolling to the chosen section
+        $(document).ready(function() {
+          $('a[href*=#]').each(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+            && location.hostname == this.hostname
+            && this.hash.replace(/#/,'') ) {
+              var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
+              var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
+               if ($target) {
+                 var targetOffset = $target.offset().top;
+
+                 $(this).click(function() {
+                    $("#nav li a").removeClass("active");
+                    $(this).addClass('active');
+                   $('html, body').animate({scrollTop: targetOffset}, 1000);
+                   return false;
+                 });
+              }
+            }
+          });
+        });
+    </script>
 </head>
 
 <body ng-controller="AppCtrl">
@@ -35,7 +60,7 @@
 <!-- INTRODUCTORY VIDEO section -->
     <section id="intro">
         <div class="content">
-            <main>Programowanie to przyszłość</main>
+            <div id="tagline">Programowanie to przyszłość</div>
             <aside>Zacznij już dziś!</aside>
         </div>
     </section>
@@ -44,11 +69,19 @@
     <section id="learn">
         <div class="content">
             <main>Chcesz programować?</main>
-            <aside>Poznaj miejsca, w których możesz to zrobić.</aside>
+            <aside>Poznaj miejsca, w których możesz to zrobić</aside>
 
             <nav>
-                <figure><figcaption>ucz się online</figcaption></figure>
-                <figure><figcaption>uc się w grupie</figcaption></figure>
+                <figure id="online">
+                    <div class="img"></div>
+                    <figcaption>ucz się</figcaption>
+                    <figcaption>online</figcaption>
+                </figure>
+                <figure id="group">
+                    <div class="img"></div>
+                    <figcaption>ucz się</figcaption>
+                    <figcaption>w grupie</figcaption>
+                </figure>
             </nav>
         </div>
     </section>
@@ -57,11 +90,17 @@
     <section id="teach">
         <div class="content">
             <main>Chcesz nauczać programowania?</main>
-            <aside>Dowiedz się, jak to zrobić.</aside>
+            <aside>Dowiedz się, jak to zrobić</aside>
 
             <nav>
-                <figure><figcaption>załóż klub kodowania</figcaption></figure>
-                <figure><figcaption>zorganizuj warsztaty</figcaption></figure>
+                <figure id="club">
+                    <figcaption>załóż klub</figcaption>
+                    <figcaption>kodowania</figcaption>
+                </figure>
+                <figure id="workshops">
+                    <figcaption>zorganizuj</figcaption>
+                    <figcaption>warsztaty</figcaption>
+                </figure>
             </nav>
         </div>
     </section>
@@ -72,9 +111,18 @@
             <main>Dlaczego warto?</main>
         
             <nav>
-                <figure><figcaption>kodowanie to trzeci język</figcaption></figure>
-                <figure><figcaption>Polska potrzebuje programistów</figcaption></figure>
-                <figure><figcaption>dosyć biernej konsumpcji</figcaption></figure>
+                <figure id="language">
+                    <figcaption>kodowanie</figcaption>
+                    <figcaption>to trzeci język</figcaption>
+                </figure>
+                <figure id="poland">
+                    <figcaption>Polska potrzebuje</figcaption>
+                    <figcaption>programistów</figcaption>
+                </figure>
+                <figure id="consumption">
+                    <figcaption>dosyć biernej</figcaption>
+                    <figcaption>konsumpcji</figcaption>
+                </figure>
             </nav>
         </div>
     </section>
@@ -82,14 +130,23 @@
 <!-- BE LIKE THEM section -->
     <section id="be_like_them">
         <div class="content">
-            <main>Bądź jak oni!</main>
+            <div class="profile">
+                <div class="profile_pic"></div>
+                <div class="profile_info"></div>
+            </div>
+            <div class="description">
+                <main>Bądź jak oni!</main>
+                <div class="full_description"></div>
+                <div class="programming_benefits"></div>
+            </div>
         </div>
+            
     </section>
 
 <!-- SUPPORT section -->
     <section id="support">
         <div class="content">
-
+            Wspierają nas
         </div>
     </section>
 
