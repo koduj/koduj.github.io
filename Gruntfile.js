@@ -1,12 +1,8 @@
 module.exports = function (grunt) {
-    // Load Grunt tasks declared in the package.json file
     require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
-    // Configure Grunt
     grunt.initConfig({
-
-        // Grunt express - our webserver
-        // https://github.com/blai/grunt-express
+        pkg: grunt.file.readJSON('package.json'),
         express: {
             all: {
                 options: {
@@ -18,17 +14,32 @@ module.exports = function (grunt) {
             }
         },
 
-        // grunt-watch will monitor the projects files
-        watch: {
+        concat: {
+            options: {
+                stripBanners: true,
+                banner: "/* koduj.com - <%= grunt.template.today('yyyy-mm-dd') %> */\n\n'use strict'\n\n",
+                separator: "\n"
+            },
             all: {
-                files: ['*.html','**/*.css', '**/*.js', '*.md', '**/*.md'],
-                options: {
-                    livereload: true
-                }
+                src: [
+                    'app/js/*.js',
+                    'app/js/controllers/**/*.js'
+                ],
+                dest: 'js/koduj.js'
             }
         },
 
-        // grunt-open will open your browser at the project's URL
+        watch: {
+            options: {
+                livereload: true
+            },
+            all: {
+                files: ['*.html', '**/*.css', 'app/js/**/*.js', '*.md', '**/*.md'],
+                tasks: ['concat']
+
+            }
+        },
+
         open: {
             all: {
                 path: 'http://localhost:9000/'
@@ -36,5 +47,5 @@ module.exports = function (grunt) {
         }
     });
 
-    grunt.registerTask('server', [ 'express', 'open', 'watch' ]);
+    grunt.registerTask('server', [ 'express', 'open', 'concat', 'watch' ]);
 };

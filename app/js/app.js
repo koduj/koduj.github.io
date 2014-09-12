@@ -1,8 +1,7 @@
-'use strict'
-
-var kodujApp = angular.module('KodujApp', [
+var kodujApp = angular.module('KodujComApp', [
     'app.directives',
-    'ngSanitize'
+    'ngSanitize',
+    'ngAnimate'
 ])
 
 marked.setOptions({
@@ -15,4 +14,3 @@ marked.setOptions({
     smartLists: true,
     smartypants: false
 });
-
