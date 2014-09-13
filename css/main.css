@@ -38,6 +38,10 @@ header #top {
     background-repeat: repeat;
 }
 
+#teach {
+    background-color: #FFFFFF
+}
+
 #learn, #onlineSection, #groupSection {
     width: 100%;
     height: 706px;
@@ -175,4 +179,47 @@ main {
 
 #consumption {
     background-color: #e0cc5e;
+}
+
+div.learn, div.teach {
+    position: relative;
+}
+
+.animation.ng-leave,
+.animation.ng-hide {
+    position : absolute;
+    top      : 0;
+    width    : 100%;
+}
+
+/* left animation */
+.animation-left.ng-show {
+    -webkit-animation : enter_left_animation 750ms;
+    animation         : enter_left_animation 750ms;
+    left              : 100%;
+}
+
+.animation-left.ng-hide {
+    -webkit-animation : leave_left_animation 750ms;
+    animation         : leave_left_animation 750ms;
+}
+
+@keyframes enter_left_animation {
+    from { left : 100%; }
+    to { left : 0; }
+}
+
+@-webkit-keyframes enter_left_animation {
+    from { left : 100%; }
+    to { left : 0; }
+}
+
+@keyframes leave_left_animation {
+    from { left : 0; }
+    to { left : -100%; }
+}
+
+@-webkit-keyframes leave_left_animation {
+    from { left : 0; }
+    to { left : -100%; }
 }

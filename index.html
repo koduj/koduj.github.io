@@ -68,10 +68,10 @@
             <aside>Zacznij już dziś!</aside>
         </div>
     </section>
-    
+
     <!-- LEARN section -->
-    <div ng-controller="LearnController">
-        <section id="learn" ng-hide="learnSectionIsHidden()">
+    <div ng-controller="LearnController" class="learn" >
+        <section id="learn" ng-hide="learnSectionIsHidden()" class="animation animation-left">
             <div class="content">
                 <main>Chcesz programować?</main>
                 <aside>Poznaj miejsca, w których możesz to zrobić</aside>
@@ -90,19 +90,19 @@
                 </nav>
             </div>
         </section>
-        <section id="onlineSection" ng-show="onlineSectionIsChoosen">
+        <section id="onlineSection" ng-show="onlineSectionIsChoosen" class="animation animation-left">
             <!--TYMCZASOWA IKONA :) :)-->
             <img src="https://i.imgur.com/91pqnZT.png" style="float: right; margin-top: 3%;margin-right: 5%" ng-click="hideOnlineSection()"/>
         </section>
-        <section id="groupSection" ng-show="groupSectionIsChoosen">
+        <section id="groupSection" ng-show="groupSectionIsChoosen" class="animation animation-left">
             <!--TYMCZASOWA IKONA :) :)-->
             <img src="https://i.imgur.com/91pqnZT.png" style="float: right; margin-top: 3%;margin-right: 5%" ng-click="hideGroupSection()"/>
         </section>
     </div>
 
 <!-- TEACH section -->
-    <div ng-controller="TeachController">
-        <section id="teach" ng-hide="teachSectionIsHidden()">
+    <div ng-controller="TeachController" class="teach">
+        <section id="teach" ng-hide="teachSectionIsHidden()" class="animation animation-left">
             <div class="content">
                 <main>Chcesz nauczać programowania?</main>
                 <aside>Dowiedz się, jak to zrobić</aside>
@@ -119,11 +119,11 @@
                 </nav>
             </div>
         </section>
-        <section id="clubSection" ng-show="clubSectionIsChosen">
+        <section id="clubSection" ng-show="clubSectionIsChosen" class="animation animation-left">
             <!--TYMCZASOWA IKONA :) :)-->
             <img src="https://i.imgur.com/91pqnZT.png" style="float: right; margin-top: 3%;margin-right: 5%" ng-click="hideClubSection()"/>
         </section>
-        <section id="workshopsSection" ng-show="workshopsSectionIsChosen">
+        <section id="workshopsSection" ng-show="workshopsSectionIsChosen" class="animation animation-left">
             <!--TYMCZASOWA IKONA :) :)-->
             <img src="https://i.imgur.com/91pqnZT.png" style="float: right; margin-top: 3%;margin-right: 5%" ng-click="hideWorkshopsSection()"/>
         </section>
