@@ -13,11 +13,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular-animate.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.2/marked.min.js"></script>
     <script src="js/koduj.js"></script>
-    <title>Koduj.com</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     
+    <!-- Needed for video in the background --> 
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript" charset="utf-8" src="js/jquery.tubular.1.0.js"></script>
+    
     <script>
-// Scrolling to the chosen section
+        // Scrolling to the chosen section
         $(document).ready(function() {
           $('a[href*=#]').each(function() {
             if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
@@ -38,179 +41,205 @@
             }
           });
         });
+        
+        // Embed YouTube video as a intro section background
+        $(document).ready(function() {
+                $('#site_wrapper').tubular({videoId: 'NCKvy4NDLB4'}); // where idOfYourVideo is the YouTube ID.
+        });
     </script>
 </head>
 
 <body ng-controller="MainController">
-
-<!-- NAVIGATION BAR -->
-    <header>
-        <div id="top"></div>
-        <div class="content">
-
-            <div id="logo"><img src="assets/logo.png" alt="Logo koduj.com"/></div>
-
-            <nav>
-                <ul>
-                    <li id="nav-learn"><a href="#learn">ucz się</a></li>
-                    <li id="nav-teach"><a href="#teach">ucz innych</a></li>
-                    <li id="nav-why"><a href="#why">dlaczego warto</a></li>
-                </ul>
-            </nav>
-        </div>
+     
+    <div id="site_wrapper">
         
-    </header>
-
-<!-- INTRODUCTORY VIDEO section -->
-    <section id="intro">
-        <div class="content">
-            <div id="tagline">Programowanie to przyszłość</div>
-            <aside>Zacznij już dziś!</aside>
-        </div>
-    </section>
-
-    <!-- LEARN section -->
-    <div ng-controller="LearnController" class="learn" >
-        <section id="learn" ng-hide="learnSectionIsHidden()" class="animation animation-left">
+        <!-- NAVIGATION BAR -->
+        <header>
+            <div id="top"></div>
             <div class="content">
-                <main>Chcesz programować?</main>
-                <aside>Poznaj miejsca, w których możesz to zrobić</aside>
+
+                <div id="logo"><img src="assets/logo1.png" alt="Logo koduj.com"/></div>
 
                 <nav>
-                    <figure id="online" ng-click="selectOnlineSection()">
-                        <div class="img"></div>
-                        <figcaption>ucz się</figcaption>
-                        <figcaption>online</figcaption>
+                    <ul>
+                        <li id="nav-learn"><a href="#learn">ucz się</a></li>
+                        <li id="nav-teach"><a href="#teach">ucz innych</a></li>
+                        <li id="nav-why"><a href="#why">dlaczego warto</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </header>
+
+        <!-- INTRODUCTORY VIDEO section -->
+        <section id="intro">
+            <div class="content">
+                <div id="tagline">Programowanie to przyszłość</div>
+                <aside>Zacznij już dziś!</aside>
+            </div>
+        </section>
+
+        <!-- LEARN section -->
+        <div ng-controller="LearnController" class="learn" >
+            <section id="learn" ng-hide="learnSectionIsHidden()" class="animation animation-left">
+                <div class="content">
+                    <main>Chcesz programować?</main>
+                    <aside>Poznaj miejsca, w których możesz to zrobić</aside>
+
+                    <nav>
+                        <figure id="online" ng-click="selectOnlineSection()">
+                            <div class="img"><img src="assets/online.png" alt="nauka online"/></div>
+                            <figcaption>ucz się<br>online</figcaption>
+                        </figure>
+                        <figure id="group" ng-click="selectGroupSection()">
+                            <div class="img"><img src="assets/group.png" alt="nauka w grupie"/></div>
+                            <figcaption>ucz się<br>w grupie</figcaption>
+                        </figure>
+                    </nav>
+                </div>
+            </section>
+            <section id="onlineSection" ng-show="onlineSectionIsChoosen" class="animation animation-left">
+                <!--TYMCZASOWA IKONA :) :)-->
+                <img src="https://i.imgur.com/91pqnZT.png" style="float: right; margin-top: 3%;margin-right: 5%" ng-click="hideOnlineSection()"/>
+            </section>
+            <section id="groupSection" ng-show="groupSectionIsChoosen" class="animation animation-left">
+                <!--TYMCZASOWA IKONA :) :)-->
+                <img src="https://i.imgur.com/91pqnZT.png" style="float: right; margin-top: 3%;margin-right: 5%" ng-click="hideGroupSection()"/>
+            </section>
+        </div>
+
+        <!-- TEACH section -->
+        <div ng-controller="TeachController" class="teach">
+            <section id="teach" ng-hide="teachSectionIsHidden()" class="animation animation-left">
+                <div class="content">
+                    <main>Chcesz nauczać programowania?</main>
+                    <aside>Dowiedz się, jak to zrobić</aside>
+
+                    <nav>
+                        <figure id="club" ng-click="selectClubSection()">
+                            <div class="img"><img src="assets/code_club.png" alt="klub kodowania"/></div>
+                            <figcaption>załóż klub<br>kodowania</figcaption>
+                        </figure>
+                        <figure id="workshops" ng-click="selectWorkshopsSection()">
+                            <div class="img"><img src="assets/workshops.png" alt="warsztaty kodowania"/></div>
+                            <figcaption>zorganizuj<br>warsztaty</figcaption>
+                        </figure>
+                    </nav>
+                </div>
+            </section>
+            <section id="clubSection" ng-show="clubSectionIsChosen" class="animation animation-left">
+                <!--TYMCZASOWA IKONA :) :)-->
+                <img src="https://i.imgur.com/91pqnZT.png" style="float: right; margin-top: 3%;margin-right: 5%" ng-click="hideClubSection()"/>
+            </section>
+            <section id="workshopsSection" ng-show="workshopsSectionIsChosen" class="animation animation-left">
+                <!--TYMCZASOWA IKONA :) :)-->
+                <img src="https://i.imgur.com/91pqnZT.png" style="float: right; margin-top: 3%;margin-right: 5%" ng-click="hideWorkshopsSection()"/>
+            </section>
+        </div>
+
+        <!-- WHY section -->
+        <section id="why">
+            <div class="content">
+                <main>Dlaczego warto?</main>
+
+                <nav>
+                    <figure id="language">
+                        <figcaption>kodowanie<br>to trzeci język</figcaption>
                     </figure>
-                    <figure id="group" ng-click="selectGroupSection()">
-                        <div class="img"></div>
-                        <figcaption>ucz się</figcaption>
-                        <figcaption>w grupie</figcaption>
+                    <figure id="poland">
+                        <figcaption>Polska potrzebuje<br>programistów</figcaption>
+                    </figure>
+                    <figure id="consumption">
+                        <figcaption>dosyć biernej<br>konsumpcji</figcaption>
                     </figure>
                 </nav>
             </div>
         </section>
-        <section id="onlineSection" ng-show="onlineSectionIsChoosen" class="animation animation-left">
-            <!--TYMCZASOWA IKONA :) :)-->
-            <img src="https://i.imgur.com/91pqnZT.png" style="float: right; margin-top: 3%;margin-right: 5%" ng-click="hideOnlineSection()"/>
-        </section>
-        <section id="groupSection" ng-show="groupSectionIsChoosen" class="animation animation-left">
-            <!--TYMCZASOWA IKONA :) :)-->
-            <img src="https://i.imgur.com/91pqnZT.png" style="float: right; margin-top: 3%;margin-right: 5%" ng-click="hideGroupSection()"/>
-        </section>
-    </div>
 
-<!-- TEACH section -->
-    <div ng-controller="TeachController" class="teach">
-        <section id="teach" ng-hide="teachSectionIsHidden()" class="animation animation-left">
+        <!-- BE LIKE THEM section -->
+        <section id="be_like_them">
             <div class="content">
-                <main>Chcesz nauczać programowania?</main>
-                <aside>Dowiedz się, jak to zrobić</aside>
-
-                <nav>
-                    <figure id="club" ng-click="selectClubSection()">
-                        <figcaption>załóż klub</figcaption>
-                        <figcaption>kodowania</figcaption>
-                    </figure>
-                    <figure id="workshops" ng-click="selectWorkshopsSection()">
-                        <figcaption>zorganizuj</figcaption>
-                        <figcaption>warsztaty</figcaption>
-                    </figure>
-                </nav>
-            </div>
-        </section>
-        <section id="clubSection" ng-show="clubSectionIsChosen" class="animation animation-left">
-            <!--TYMCZASOWA IKONA :) :)-->
-            <img src="https://i.imgur.com/91pqnZT.png" style="float: right; margin-top: 3%;margin-right: 5%" ng-click="hideClubSection()"/>
-        </section>
-        <section id="workshopsSection" ng-show="workshopsSectionIsChosen" class="animation animation-left">
-            <!--TYMCZASOWA IKONA :) :)-->
-            <img src="https://i.imgur.com/91pqnZT.png" style="float: right; margin-top: 3%;margin-right: 5%" ng-click="hideWorkshopsSection()"/>
-        </section>
-    </div>
-
-<!-- WHY section -->
-    <section id="why">
-        <div class="content">
-            <main>Dlaczego warto?</main>
-        
-            <nav>
-                <figure id="language">
-                    <figcaption>kodowanie</figcaption>
-                    <figcaption>to trzeci język</figcaption>
-                </figure>
-                <figure id="poland">
-                    <figcaption>Polska potrzebuje</figcaption>
-                    <figcaption>programistów</figcaption>
-                </figure>
-                <figure id="consumption">
-                    <figcaption>dosyć biernej</figcaption>
-                    <figcaption>konsumpcji</figcaption>
-                </figure>
-            </nav>
-        </div>
-    </section>
-
-<!-- BE LIKE THEM section -->
-    <section id="be_like_them">
-        <div class="content">
-            <div class="profile">
-                <div class="profile_pic"></div>
-                <div class="profile_info"></div>
-            </div>
-            <div class="description">
                 <main>Bądź jak oni!</main>
-                <div class="full_description"></div>
-                <div class="programming_benefits"></div>
-            </div>
-        </div>
-            
-    </section>
-
-<!-- SUPPORT section -->
-    <section id="support">
-        <div class="content">
-            Wspierają nas
-        </div>
-    </section>
-
-<!-- FOOTER -->
-    <footer>
-        <div class="content">
-            <div id="footer_top">
-                <div id="footer_logo"></div>
-
-                <div id="social">
-                    <span id="find_us">
-                        <h5>znajdziesz nas wszędzie</h5>
-                    </span>
-
-                    <span id="facebook">
-                        <a href=""><img src="" alt="Facebook"/></a>
-                    </span>
-
-                    <span id="twitter">
-                        <a href=""><img src="" alt="Twitter"></a>
-                    </span>
-
-                    <span id="youtube">
-                        <a href=""><img src="" alt="You Tube"></a>
-                    </span>
-
-                    <span id="pinterest">
-                        <a href=""><img src="" alt="Pinterest"></a>
-                    </span>
-
-                    <span id="google_plus">
-                        <a href=""><img src="" alt="Google Plus"></a>
-                    </span>
+                <div class="profile">
+                    <div class="profile_pic">
+                        <img src="assets/stempniak.png" alt="Paweł Stempniak"/>
+                    </div>
+                    <div class="profile_info">
+                        <div class="name">Paweł Stempniak</div>
+                        <div class="about">PR-owiec i ekspert komunikacji w nowych mediach, przedsiębiorca, trener i wykładowca</div>
+                    </div>
+                </div>
+                <div class="description">
+                    <div class="full_description"></div>
+                    <div class="programming_benefits"></div>
                 </div>
             </div>
 
-            <div id="footer_bottom"></div>
-        </div>
-        
-    </footer>
+        </section>
+
+    <!-- SUPPORT section -->
+    <!--
+        <section id="support">
+            <div class="content">
+                wspierają nas
+            </div>
+        </section>
+    !-->
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="content">
+                <div id="footer_top">
+                    <div id="footer_main">
+                        <img src="assets/sygnet1.png" alt="Logo koduj.com"/>
+                        <div id="motto">
+                            <div id="motto1">Programowanie to przyszłość.</div>
+                            <div id="motto2">Zacznij już dziś</div> 
+                        </div>
+                    </div>
+
+                    <div id="social">
+                        <span id="find_us">Znajdziesz nas</span>
+
+                        <span id="facebook">
+                            <a target="_blank" href="https://www.facebook.com/kodujcom"><img src="assets/facebook.png" alt="Facebook"/></a>
+                        </span>
+
+                        <span id="twitter">
+                            <a target="_blank" href=""><img src="assets/twitter.png" alt="Twitter"/></a>
+                        </span>
+
+                        <span id="youtube">
+                            <a target="_blank" href="https://www.youtube.com/channel/UCKb10KVB1XCVYnnGEaXmP_Q"><img src="assets/youtube.png" alt="YouTube"/></a>
+                        </span>
+
+                        <span id="pinterest">
+                            <a target="_blank" href=""><img src="assets/pinterest.png" alt="Pinterest"/></a>
+                        </span>
+
+                        <span id="google_plus">
+                            <a target="_blank" href=""><img src="assets/googleplus.png" alt="Google Plus"/></a>
+                        </span>
+                    </div>
+                </div>
+
+                <div id="footer_bottom">
+                    <nav id="footer_nav">
+                    <ul>
+                        <li id="about_us"><a href="">O nas</a></li>
+                        <li id="team"><a href="">Zespół</a></li>
+                        <li id="contact"><a href="">Kontakt</a></li>
+                        <li id="blog"><a href="">Blog</a></li>
+                    </ul>
+                </nav>
+                </div>
+
+            </div>
+            <div id="footer_green_bar"></div>
+
+        </footer>
+    
+    </div>
     
 </body>
 </html>
