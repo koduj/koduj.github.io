@@ -1,3 +1,4 @@
+/* GENERAL STYLING */
 body {
     font-family: 'Arimo', sans-serif;
     margin: 0;
@@ -7,74 +8,8 @@ body {
 }
 
 .content {
-    width: 1120px;
+    width: 960px;
     margin: 0 auto;
-}
-
-header {
-    width: 100%;
-    height: 99px;
-    background-color: #7bcc3f;
-    position: fixed;
-    z-index: 1;
-    padding-top: 18px;
-    padding-bottom: 18px;
-}
-
-header #top {
-    width: 100%;
-    height: 8px;
-    background-color: #2a2a2a;
-}
-
-#intro {
-    width: 100%;
-    height: 560px;
-    padding-top: 99px;
-}
-
-#learn {
-    background-image: url('../assets/background.png');
-    background-repeat: repeat;
-}
-
-#teach {
-    background-color: #FFFFFF
-}
-
-#learn, #onlineSection, #groupSection {
-    width: 100%;
-    height: 706px;
-}
-
-#teach, #clubSection, #workshopsSection {
-    width: 100%;
-    height: 702px;
-}
-
-#why {
-    width: 100%;
-    height: 490px;
-    background-image: url('../assets/background.png');
-    background-repeat: repeat;
-}
-
-#be_like_them {
-    width: 100%;
-    height: 811px;
-    background-image: url('../assets/background.png');
-    background-repeat: repeat;
-}
-
-#support {
-    width: 100%;
-    height: 170px;
-}
-
-footer {
-    width: 100%;
-    height: 169px;
-    background-color: #2a2a2a
 }
 
 main {
@@ -83,16 +18,7 @@ main {
     font-size: 26pt;
     text-align: center;
     color: black;
-    padding-top: 137px;
-}
-
-.content #tagline {
-    font-family: 'Arimo', sans-serif;
-    font-weight: 700;
-    font-size: 30pt;
-    text-align: center;
-    color: black;
-    margin-top: 240px;
+    padding-top: 110px;
 }
 
 .content aside {
@@ -105,44 +31,10 @@ main {
     margin-bottom: 90px;
 }
 
-#learn figure {
-    width: 543px; 
-    height: 297px;
-    float: left;
-}
-
-#learn #online {
-    margin-right: 34px;
-}
-
-#teach figure {
-    width: 543px; 
-    height: 297px;
-    float: left;
-}
-
-#teach #club {
-    margin-right: 34px;
-}
-
-#why .content figure {
-    width: 348px; 
-    height: 308px;
-    float: left;
-}
-
-#why #language {
-    margin-right: 34px;
-    margin-top: 60px;
-}
-
-#why #poland {
-    margin-right: 34px;
-    margin-top: 60px;
-}
-
-#why #consumption {
-    margin-top: 60px;
+.content .img {
+    text-align: center;
+    margin-top: 66px;
+    margin-bottom: 25px;
 }
 
 .content figcaption {
@@ -151,6 +43,307 @@ main {
     font-size: 18pt;
     text-align: center;
     color: white;
+}
+
+/* NAVIGATION BAR */
+header {
+    width: 100%;
+    height: 60px;
+    background-color: #2b2a27;
+    position: fixed;
+    z-index: 1;
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+
+header #top {
+    width: 100%;
+    height: 6px;
+    background-color: #7bcc3f;
+}
+
+header #logo {
+    padding-top: 8px;
+    float: left;
+}
+
+header nav {
+    width: 400px;
+    float: right;
+    margin-top: 22px;
+}
+
+header nav ul {
+    list-style: none;
+    display: block;
+    margin: 0 auto;
+}
+
+header nav li {
+    float: left;
+    padding-left: 50px;
+}
+
+nav li a {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    font-family: 'Arimo';
+}
+nav li a:active {
+    color: #7bcc3f;
+    border-bottom: 1px solid #7bcc3f;
+}
+
+nav li a:hover {
+    color: #7bcc3f;
+    border-bottom: 1px solid #7bcc3f;
+}
+
+/* INTRO SECTION */
+#intro {
+    width: 100%;
+    height: 760px;
+    padding-top: 58px;
+}
+
+#intro #tagline {
+    font-family: 'Arimo', sans-serif;
+    font-weight: 700;
+    font-size: 38pt;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    color: white;
+    margin-top: 500px;
+}
+
+#intro aside {
+    color: white;
+    font-size: 30pt;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
+    margin-top: 25px;
+}
+
+/* LEARN SECTION */
+
+#learn {
+    background-image: url('../assets/background.png');
+    background-repeat: repeat;
+}
+
+#learn, #onlineSection, #groupSection {
+    width: 100%;
+    height: 706px;
+}
+
+#learn figure {
+    width: 467px; 
+    height: 297px;
+    float: left;
+}
+
+#learn #online {
+    margin-right: 26px;
+    background-color: #ef3d6c;
+}
+
+#learn #group {
+    background-color: #ba5ca3;
+}
+
+/* TEACH SECTION */
+#teach {
+    background-color: #FFFFFF
+}
+
+#teach figure {
+    width: 467px; 
+    height: 297px;
+    float: left;
+}
+
+#teach #club {
+    margin-right: 26px;
+    background-color: #7cd23c;
+}
+
+#teach #workshops {
+    background-color: #6a9fa7;
+}
+
+#teach, #clubSection, #workshopsSection {
+    width: 100%;
+    height: 702px;
+}
+
+/* WHY SECTION */
+#why {
+    width: 100%;
+    height: 490px;
+    background-image: url('../assets/background.png');
+    background-repeat: repeat;
+}
+
+#why figure {
+    width: 302px; 
+    height: 308px;
+    float: left;
+}
+
+#why figcaption {
+    margin-top: 200px;
+}
+
+#why #language {
+    background-color: #7da2b9;
+    margin-right: 26px;
+    margin-top: 60px;
+}
+
+#why #poland {
+    background-color: #bf5b9d;
+    margin-right: 26px;
+    margin-top: 60px;
+}
+
+#why #consumption {
+    background-color: #e0cc5e;
+    margin-top: 60px;
+}
+
+/* BE LIKE THEM SECTION */
+#be_like_them {
+    width: 100%;
+    height: 860px;
+    background-image: url('../assets/background.png');
+    background-repeat: repeat;
+}
+
+#be_like_them .profile {
+    float: left;
+}
+
+#be_like_them .profile_pic {
+    margin-left: 20px;
+}
+
+#be_like_them .profile_info {
+    width: 322px;
+    height: 194px;
+    background-color: #8a9ca7;
+}
+
+#be_like_them .profile_info .name {
+    font-family: 'Arimo', sans-serif;
+    font-weight: 400;
+    font-size: 18pt;
+    text-align: center;
+    color: white;
+    padding-top: 20px;
+}
+
+#be_like_them .profile_info .about {
+    font-family: 'Arimo', sans-serif;
+    font-weight: 400;
+    font-size: 14pt;
+    text-align: center;
+    color: white;
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#be_like_them .description .full_description {
+    width: 560px;
+    height: 177px;
+    border: solid 5px #8a9ca7;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    margin-left: 50px;
+    float: left;
+}
+
+#be_like_them .description .programming_benefits {
+    width: 560px;
+    height: 177px;
+    border: solid 5px #8a9ca7;
+    margin-left: 50px;
+    float: left;
+}
+
+/* SUPPORT SECTION */
+#support {
+    width: 100%;
+    height: 170px;
+}
+
+/* FOOTER */
+footer {
+    width: 100%;
+    height: 169px;
+    background-color: #2b2a27;
+}
+
+#footer_top {
+    padding-top: 25px;
+}
+
+footer img {
+    float: left;
+    margin-right: 20px;
+}
+
+footer #motto {
+    float: left;
+}
+
+footer #motto1 {
+    font-family: 'Arimo', sans-serif;
+    font-weight: 700;
+    font-size: 10pt;
+    color: white;
+    margin-bottom: 5px;
+}
+
+footer #motto2 {
+    font-family: 'Arimo', sans-serif;
+    font-weight: 400;
+    font-size: 10pt;
+    color: white;
+}
+footer #social {
+    float: right;
+}
+
+footer #find_us {
+    font-family: 'Arimo', sans-serif;
+    font-weight: 400;
+    font-size: 10pt;
+    color: white;
+    float: left;
+    margin-right: 25px;
+}
+
+footer #footer_bottom {
+    margin-top: 85px;
+}
+
+footer nav ul {
+    list-style: none;
+    display: block;
+    margin: 0 auto;
+}
+
+footer nav li {
+    float: left;
+    padding-right: 40px;
+}
+
+footer #footer_green_bar {
+    width: 100%;
+    height: 6px;
+    background-color: #7bcc3f;
+    margin-top: 120px;
 }
 
 #online, #onlineSection{
@@ -167,18 +360,6 @@ main {
 
 #workshops, #workshopsSection {
     background-color: #6a9fa7;
-}
-
-#language {
-    background-color: #7da2b9;
-}
-
-#poland {
-    background-color: #bf5b9d;
-}
-
-#consumption {
-    background-color: #e0cc5e;
 }
 
 div.learn, div.teach {
