@@ -1,4 +1,4 @@
-/* koduj.com - 2014-09-13 */
+/* koduj.com */
 
 'use strict'
 

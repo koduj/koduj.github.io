@@ -17,7 +17,7 @@ module.exports = function (grunt) {
         concat: {
             options: {
                 stripBanners: true,
-                banner: "/* koduj.com - <%= grunt.template.today('yyyy-mm-dd') %> */\n\n'use strict'\n\n",
+                banner: "/* koduj.com */\n\n'use strict'\n\n",
                 separator: "\n"
             },
             all: {
