@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="pl" ng-app="KodujComApp">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Koduj.com">
+    <meta name="description" content="koduj">
+    <meta name="author" content="Zespół Koduj.com">
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <link rel="stylesheet" type="text/css" href='https://fonts.googleapis.com/css?family=Arimo:400,700'/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.2.2/flexslider-min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular-sanitize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular-animate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.2/marked.min.js"></script>
+    <script src="js/koduj.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.2.2/jquery.flexslider-min.js"></script>
+
+    <script type="text/javascript" charset="utf-8" src="js/jquery.tubular.1.0.js"></script>
+
+    <script>
+        // Scrolling to the chosen section
+        $(document).ready(function () {
+            $('a[href*=#]').each(function () {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+                        && location.hostname == this.hostname
+                        && this.hash.replace(/#/, '')) {
+                    var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) + ']');
+                    var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
+                    if ($target) {
+                        var targetOffset = $target.offset().top;
+
+                        $(this).click(function () {
+                            $("#nav li a").removeClass("active");
+                            $(this).addClass('active');
+                            $('html, body').animate({scrollTop: targetOffset}, 1000);
+                            return false;
+                        });
+                    }
+                }
+            });
+        });
+
+        // Embed YouTube video as a intro section background
+        $(document).ready(function () {
+            $('#site_wrapper').tubular({videoId: 'NCKvy4NDLB4'}); // where idOfYourVideo is the YouTube ID.
+        });
+    </script>
+    <!-- SLIDER: CSS który zmniejsza  -->
+    <style type="text/css">
+        .flexslider-container {
+            width  : 50%;
+            margin : 10px auto;
+        }
+    </style>
+</head>
+
+<body ng-controller="MainController">
+<!--SLIDER: struktura obrazków-->
+<div id="container" class="cf flexslider-container">
+    <div id="main" role="main">
+        <section class="slider">
+            <div id="slider" class="flexslider">
+                <ul class="slides">
+                    <li>
+                        <img src="http://flexslider.woothemes.com/images/kitchen_adventurer_cheesecake_brownie.jpg"/>
+                    </li>
+                    <li>
+                        <img src="http://flexslider.woothemes.com/images/kitchen_adventurer_lemon.jpg"/>
+                    </li>
+                    <li>
+                        <img src="http://flexslider.woothemes.com/images/kitchen_adventurer_donut.jpg"/>
+                    </li>
+                    <li>
+                        <img src="http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg"/>
+                    </li>
+                    <li>
+                        <img src="http://flexslider.woothemes.com/images/kitchen_adventurer_cheesecake_brownie.jpg"/>
+                    </li>
+                    <li>
+                        <img src="http://flexslider.woothemes.com/images/kitchen_adventurer_lemon.jpg"/>
+                    </li>
+                    <li>
+                        <img src="http://flexslider.woothemes.com/images/kitchen_adventurer_donut.jpg"/>
+                    </li>
+                    <li>
+                        <img src="http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg"/>
+                    </li>
+                </ul>
+            </div>
+            <div id="carousel" class="flexslider">
+                <ul class="slides">
+                    <li>
+                        <img src="http://flexslider.woothemes.com/images/kitchen_adventurer_cheesecake_brownie.jpg"/>
+                    </li>
+                    <li>
+                        <img src="http://flexslider.woothemes.com/images/kitchen_adventurer_lemon.jpg"/>
+                    </li>
+                    <li>
+                        <img src="http://flexslider.woothemes.com/images/kitchen_adventurer_donut.jpg"/>
+                    </li>
+                    <li>
+                        <img src="http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg"/>
+                    </li>
+                    <li>
+                        <img src="http://flexslider.woothemes.com/images/kitchen_adventurer_cheesecake_brownie.jpg"/>
+                    </li>
+                    <li>
+                        <img src="http://flexslider.woothemes.com/images/kitchen_adventurer_lemon.jpg"/>
+                    </li>
+                    <li>
+                        <img src="http://flexslider.woothemes.com/images/kitchen_adventurer_donut.jpg"/>
+                    </li>
+                    <li>
+                        <img src="http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg"/>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- SLIDER: KONFIGURACJA SLIDERA docelowo w jakimś pliku JS :) -->
+    <script type="text/javascript">
+        $(window).load(function () {
+            $('#carousel').flexslider({
+                animation: "slide",
+                controlNav: false,
+                animationLoop: false,
+                slideshow: false,
+                itemWidth: 210,
+                itemMargin: 5,
+                asNavFor: '#slider'
+            });
+
+            $('#slider').flexslider({
+                animation: "slide",
+                controlNav: false,
+                animationLoop: false,
+                slideshow: false,
+                sync: "#carousel",
+                start: function (slider) {
+                    $('body').removeClass('loading');
+                }
+            });
+        });
+    </script>
+</div>
+
+</body>
+</html>
