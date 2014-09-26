@@ -16,9 +16,10 @@ main {
     font-family: 'Arimo', sans-serif;
     font-weight: 400;
     font-size: 26pt;
-    text-align: center;
+    text-align: left;
     color: black;
     padding-top: 110px;
+    text-shadow: 1px 1px 1px #B3B3B3;
 }
 
 .content aside {
@@ -27,7 +28,7 @@ main {
     font-size: 18pt;
     text-align: center;
     color: black;
-    margin-top: 10px;
+    margin-top: 25px;
     margin-bottom: 90px;
 }
 
@@ -40,7 +41,7 @@ main {
 .content figcaption {
     font-family: 'Arimo', sans-serif;
     font-weight: 400;
-    font-size: 18pt;
+    font-size: 22pt;
     text-align: center;
     color: white;
 }
@@ -140,6 +141,7 @@ nav li a:hover {
     width: 467px; 
     height: 297px;
     float: left;
+    box-shadow: 1px 1px 2px #9C9C9C;
 }
 
 #learn #online {
@@ -160,6 +162,7 @@ nav li a:hover {
     width: 467px; 
     height: 297px;
     float: left;
+    box-shadow: 1px 1px 2px #9C9C9C;
 }
 
 #teach #club {
@@ -188,6 +191,7 @@ nav li a:hover {
     width: 302px; 
     height: 308px;
     float: left;
+    box-shadow: 1px 1px 2px #9C9C9C;
 }
 
 #why figcaption {
@@ -197,18 +201,15 @@ nav li a:hover {
 #why #language {
     background-color: #7da2b9;
     margin-right: 26px;
-    margin-top: 60px;
 }
 
 #why #poland {
     background-color: #bf5b9d;
     margin-right: 26px;
-    margin-top: 60px;
 }
 
 #why #consumption {
     background-color: #e0cc5e;
-    margin-top: 60px;
 }
 
 /* BE LIKE THEM SECTION */
@@ -217,6 +218,12 @@ nav li a:hover {
     height: 860px;
     background-image: url('../assets/background.png');
     background-repeat: repeat;
+    padding-top: 110px;
+    padding-bottom: 50px;
+}
+#be_like_them main {
+    padding-bottom: 50px;
+    text-align: center;
 }
 
 #be_like_them .profile {
@@ -255,7 +262,7 @@ nav li a:hover {
 
 #be_like_them .description .full_description {
     width: 560px;
-    height: 177px;
+    height: 290px;
     border: solid 5px #8a9ca7;
     margin-top: 50px;
     margin-bottom: 25px;
@@ -265,10 +272,33 @@ nav li a:hover {
 
 #be_like_them .description .programming_benefits {
     width: 560px;
-    height: 177px;
+    height: 235px;
     border: solid 5px #8a9ca7;
     margin-left: 50px;
     float: left;
+}
+
+#be_like_them .description h1 {
+    font-family: 'Arimo', sans-serif;
+    font-weight: 700;
+    font-size: 14pt;
+    text-align: left;
+    color: black;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+
+#be_like_them .description p {
+    font-family: 'Arimo', sans-serif;
+    font-weight: 400;
+    font-size: 11pt;
+    line-height: 1.2;
+    text-align: left;
+    color: black;
+    padding-left: 40px;
+    padding-right: 20px;
+    padding-bottom: 20px;
 }
 
 /* SUPPORT SECTION */
@@ -346,6 +376,14 @@ footer #footer_green_bar {
     margin-top: 120px;
 }
 
+footer #contact {
+    font-family: 'Arimo', sans-serif;
+    font-weight: 400;
+    font-size: 12pt;
+    color: white;
+    float: right;
+}
+
 #online, #onlineSection{
     background-color: #ef3d6c;
 }
@@ -403,4 +441,171 @@ div.learn, div.teach {
 @-webkit-keyframes leave_left_animation {
     from { left : 0; }
     to { left : -100%; }
+}
+
+/* CAROUSEL */
+.flexslider-container {
+    width: 50%;
+    margin: 10px auto;
+}
+
+/* Learn online */
+#onlineSection {
+    padding-top: 35px;
+    padding-bottom: 30px;
+}
+
+#onlineSection .slides {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+#onlineSection .slides .about_online h1 {
+    font-family: 'Arimo', sans-serif;
+    font-weight: 700;
+    font-size: 48pt;
+    color: #ef3d6c;
+    padding-bottom: 25px;
+}
+
+#onlineSection .slides .about_online h2 {
+    font-family: 'Arimo', sans-serif;
+    font-weight: 700;
+    font-size: 24pt;
+    color: #ef3d6c;
+    padding-bottom: 25px;
+}
+
+#onlineSection .slides .about_online p {
+    font-family: 'Arimo', sans-serif;
+    font-weight: 400;
+    font-size: 11pt;
+    color: black;
+    padding-bottom: 25px;
+    line-height: 1.2;
+    margin-right: 105px;
+}
+
+#onlineSection .slides .icons_online {
+    float: left;
+    margin-top: 25px;
+    text-align: center;
+}
+
+#onlineSection img {
+    height: 48px;
+    width: 48px;
+}
+
+#onlineSection .slides .icons_online .link {
+    float: left;
+    margin-right: 50px;
+}
+
+#onlineSection .slides .icons_online .cost {
+    float: left;
+    margin-right: 50px;
+}
+
+#onlineSection .slides .icons_online .age {
+    float: left;
+    margin-right: 50px;
+}
+#onlineSection .slides .icons_online .language {
+    float: left;
+    margin-right: 50px;
+}
+
+#onlineSection .slides .icons_online .level {
+    float: left;
+}
+
+#onlineSection .slides .icons_online p {
+    margin-top: 10px;
+}
+
+#carousel .slides img {
+    width: 75px;
+    height: 75px;
+}
+
+/* Learn in group */
+#onlineSection {
+    padding-top: 35px;
+    padding-bottom: 30px;
+}
+
+/* Learn oline */
+#groupSection .slides {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+#groupSection .slides .about_online h1 {
+    font-family: 'Arimo', sans-serif;
+    font-weight: 700;
+    font-size: 48pt;
+    color: #ef3d6c;
+    padding-bottom: 25px;
+}
+
+#groupSection .slides .about_online h2 {
+    font-family: 'Arimo', sans-serif;
+    font-weight: 700;
+    font-size: 24pt;
+    color: #ef3d6c;
+    padding-bottom: 25px;
+}
+
+#groupSection .slides .about_online p {
+    font-family: 'Arimo', sans-serif;
+    font-weight: 400;
+    font-size: 11pt;
+    color: black;
+    padding-bottom: 25px;
+    line-height: 1.2;
+    margin-right: 105px;
+}
+
+#groupSection .slides .icons_online {
+    float: left;
+    margin-top: 25px;
+    text-align: center;
+}
+
+#groupSection img {
+    height: 48px;
+    width: 48px;
+}
+
+#groupSection .slides .icons_online .link {
+    float: left;
+    margin-right: 50px;
+}
+
+#groupSection .slides .icons_online .cost {
+    float: left;
+    margin-right: 50px;
+}
+
+#groupSection .slides .icons_online .age {
+    float: left;
+    margin-right: 50px;
+}
+
+#groupSection .slides .icons_online .language {
+    float: left;
+    margin-right: 50px;
+}
+
+#groupSection .slides .icons_online .level {
+    float: left;
+}
+
+#groupSection .slides .icons_online p {
+    margin-top: 10px;
 }

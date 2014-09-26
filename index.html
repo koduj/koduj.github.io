@@ -8,44 +8,71 @@
     <link rel="stylesheet" type="text/css" href="css/main.css"/>
     <link rel="stylesheet" type="text/css" href='https://fonts.googleapis.com/css?family=Arimo:400,700'/>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.2.2/flexslider-min.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular-sanitize.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular-animate.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.2/marked.min.js"></script>
     <script src="js/koduj.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.2.2/jquery.flexslider-min.js"></script>
 
-    <!-- Needed for video in the background --> 
     <script type="text/javascript" charset="utf-8" src="js/jquery.tubular.1.0.js"></script>
-    
+
     <script>
         // Scrolling to the chosen section
-        $(document).ready(function() {
-          $('a[href*=#]').each(function() {
-            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
-            && location.hostname == this.hostname
-            && this.hash.replace(/#/,'') ) {
-              var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
-              var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
-               if ($target) {
-                 var targetOffset = $target.offset().top;
+        $(document).ready(function () {
+            $('a[href*=#]').each(function () {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+                        && location.hostname == this.hostname
+                        && this.hash.replace(/#/, '')) {
+                    var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) + ']');
+                    var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
+                    if ($target) {
+                        var targetOffset = $target.offset().top;
 
-                 $(this).click(function() {
-                    $("#nav li a").removeClass("active");
-                    $(this).addClass('active');
-                   $('html, body').animate({scrollTop: targetOffset}, 1000);
-                   return false;
-                 });
-              }
-            }
-          });
+                        $(this).click(function () {
+                            $("#nav li a").removeClass("active");
+                            $(this).addClass('active');
+                            $('html, body').animate({scrollTop: targetOffset}, 1000);
+                            return false;
+                        });
+                    }
+                }
+            });
         });
-        
+
         // Embed YouTube video as a intro section background
-        $(document).ready(function() {
-                $('#site_wrapper').tubular({videoId: 'NCKvy4NDLB4'}); // where idOfYourVideo is the YouTube ID.
+        $(document).ready(function () {
+            //$('#site_wrapper').tubular({videoId: 'NCKvy4NDLB4'}); // where idOfYourVideo is the YouTube ID.
         });
+    
+        // Flexi slider
+        $(window).load(function () {
+            $('#carousel').flexslider({
+                 animation: "slide",
+                 controlNav: false,
+                 animationLoop: false,
+                 slideshow: false,
+                 itemWidth: 210,
+                 itemMargin: 5,
+                 asNavFor: '#slider'
+                 });
+
+                 $('#slider').flexslider({
+                     animation: "slide",
+                     controlNav: false,
+                     animationLoop: false,
+                     slideshow: false,
+                     sync: "#carousel",
+                     start: function (slider) {
+                        $('body').removeClass('loading');
+                     }
+               });
+           });
+                    
     </script>
+   
 </head>
 
 <body ng-controller="MainController">
@@ -74,7 +101,7 @@
         <section id="intro">
             <div class="content">
                 <div id="tagline">Programowanie to przyszłość</div>
-                <aside>Zacznij już dziś!</aside>
+                <aside>Zacznij z nami!</aside>
             </div>
         </section>
 
@@ -83,7 +110,7 @@
             <section id="learn" ng-hide="learnSectionIsHidden()" class="animation animation-left">
                 <div class="content">
                     <main>Chcesz programować?</main>
-                    <aside>Poznaj miejsca, w których możesz to zrobić</aside>
+                    <aside>Poznaj miejsca, które Ci pomogą</aside>
 
                     <nav>
                         <figure id="online" ng-click="selectOnlineSection()">
@@ -97,13 +124,206 @@
                     </nav>
                 </div>
             </section>
+            
             <section id="onlineSection" ng-show="onlineSectionIsChoosen" class="animation animation-left">
                 <!--TYMCZASOWA IKONA :) :)-->
                 <img src="https://i.imgur.com/91pqnZT.png" style="float: right; margin-top: 3%;margin-right: 5%" ng-click="hideOnlineSection()"/>
+                <!--SLIDER: struktura obrazków-->
+                <div id="container" class="cf flexslider-container">
+                    <div id="main" role="main">
+                        <section class="slider">
+                            <div id="slider" class="flexslider">
+                                <ul class="slides">
+                                    <li class="scratch">
+                                        <div class="about_online">
+                                            <h1>Scratch</h1>
+                                            <p>Scratch to edukacyjny język obiektowy, stworzony jako środek do nauczania dzieci i młodzieży (od 8 lat wzwyż) podstawprogramowania oraz środowisko programistyczne służące do tworzenia i uruchamiania programów w tym języku. Scratch umożliwia łatwe tworzenie interaktywnych historyjek, animacji, gier, muzyki. Programowanie odbywa się w sposób wizualny - elementy języka mają kształt puzzli a poprzez przeciąganie mogą być układane w określonym porządku. W ten sposób tworzy się kod przypisany określonemu obiektowi. Obiekty mogą reagować na zdarzenia zewnętrzne. Wygląd postaci przypisanych do obiektów można wybierać z zasobnika, tworzyć lub importować z zewnątrz.</p>
+                                            <h2>Kursy</h2>
+                                            <p>Stworzona aplikacja może być grą, historyjką, a nawet animacją. Tworzone programy mogą odtwarzać dźwięki, rysować, porównywać kolory i wiele więcej!</p>
+                                        </div>
+                                        <div class="icons_online">
+                                            <div class="link">
+                                                <a href="http://scratch.mit.edu/"><img src="assets/learn_online/link.png" alt="Strona"/>
+                                                    <p>Strona</p>
+                                                </a>
+                                            </div>
+                                            <div class="cost">
+                                                <img src="assets/learn_online/cost.png" alt="Koszt"/>
+                                                <p>Bezpłatny</p>
+                                            </div>
+                                            <div class="age">
+                                                <img src="assets/learn_online/age.png" alt="Wiek"/>
+                                                <p>8+</p>
+                                            </div>
+                                            <div class="language">
+                                                <img src="assets/learn_online/language.png" alt="Język"/>
+                                                <p>Polski</p>
+                                            </div>
+                                            <div class="level">
+                                                <img src="assets/learn_online/easy.png" alt="Poziom"/>
+                                                <p>Podstawowy</p>
+                                            </div>
+                                        </div>
+                                        
+                                    </li>
+                                    <li>
+                                        <img src="http://flexslider.woothemes.com/images/kitchen_adventurer_lemon.jpg"/>
+                                    </li>
+                                    <li>
+                                        <img src="http://flexslider.woothemes.com/images/kitchen_adventurer_donut.jpg"/>
+                                    </li>
+                                    <li>
+                                        <img src="http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg"/>
+                                    </li>
+                                    <li>
+                                        <img src="http://flexslider.woothemes.com/images/kitchen_adventurer_cheesecake_brownie.jpg"/>
+                                    </li>
+                                    <li>
+                                        <img src="http://flexslider.woothemes.com/images/kitchen_adventurer_lemon.jpg"/>
+                                    </li>
+                                    <li>
+                                        <img src="http://flexslider.woothemes.com/images/kitchen_adventurer_donut.jpg"/>
+                                    </li>
+                                    <li>
+                                        <img src="http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg"/>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="carousel" class="flexslider">
+                                <ul class="slides">
+                                    <li>
+                                        <img src="assets/logos/scratch.png"/>
+                                    </li>
+                                    <li>
+                                        <img src="http://flexslider.woothemes.com/images/kitchen_adventurer_lemon.jpg"/>
+                                    </li>
+                                    <li>
+                                        <img src="http://flexslider.woothemes.com/images/kitchen_adventurer_donut.jpg"/>
+                                    </li>
+                                    <li>
+                                        <img src="http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg"/>
+                                    </li>
+                                    <li>
+                                        <img src="http://flexslider.woothemes.com/images/kitchen_adventurer_cheesecake_brownie.jpg"/>
+                                    </li>
+                                    <li>
+                                        <img src="http://flexslider.woothemes.com/images/kitchen_adventurer_lemon.jpg"/>
+                                    </li>
+                                    <li>
+                                        <img src="http://flexslider.woothemes.com/images/kitchen_adventurer_donut.jpg"/>
+                                    </li>
+                                    <li>
+                                        <img src="http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg"/>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+
+                    </div>
+
+                    
+                </div>
+                
             </section>
+            
             <section id="groupSection" ng-show="groupSectionIsChoosen" class="animation animation-left">
                 <!--TYMCZASOWA IKONA :) :)-->
                 <img src="https://i.imgur.com/91pqnZT.png" style="float: right; margin-top: 3%;margin-right: 5%" ng-click="hideGroupSection()"/>
+                <div id="container" class="cf flexslider-container">
+                    <div id="main" role="main">
+                        <section class="slider">
+                            <div id="slider" class="flexslider">
+                                <ul class="slides">
+                                    <li class="scratch">
+                                        <div class="about_online">
+                                            <h1>Młodzi Programiści</h1>
+                                            <p>Grupa młodsza przeznaczona jest dla dzieci w wieku od 8 do 12 lat. Dzieci w tej grupie skupiają się na nauce podstaw programowania oraz oswajają się z nazewnictwem programistycznym tworząc gry i animacje.
+Grupa starsza przeznaczona jest dla młodzieży w wieku od 13 do 19 lat. Uczniowie w tej grupie skupiają się na nauce profesjonalnych, zawodowych języków programowania. W regularnym roku szkolnym zajęcia prowadzone są przede wszystkim w godzinach popołudniowych z racji tego, że w godzinach wcześniejszych większość uczniów znajduje się w swoich szkołach macierzystych. Zajęcia odbywają się raz w tygodniu i trwają 90 minut.</p>
+                                            <h2>Kursy</h2>
+                                            <p>Nauka podstaw programowania poprzez tworzenie gier i animacji (8-12 lat), profesjonalne języki programowania (13-19 lat)</p>
+                                        </div>
+                                        <div class="icons_online">
+                                            <div class="link">
+                                                <a href="http://mlodziprogramisci.pl"><img src="assets/learn_group/link.png" alt="Strona"/>
+                                                    <p>Strona</p>
+                                                </a>
+                                            </div>
+                                            <div class="cost">
+                                                <img src="assets/learn_online/cost.png" alt="Koszt"/>
+                                                <p>Bezpłatny</p>
+                                            </div>
+                                            <div class="age">
+                                                <img src="assets/learn_online/age.png" alt="Wiek"/>
+                                                <p>8+</p>
+                                            </div>
+                                            <div class="language">
+                                                <img src="assets/learn_online/language.png" alt="Język"/>
+                                                <p>Polski</p>
+                                            </div>
+                                            <div class="level">
+                                                <img src="assets/learn_online/easy.png" alt="Poziom"/>
+                                                <p>Podstawowy</p>
+                                            </div>
+                                        </div>
+                                        
+                                    </li>
+                                    <li>
+                                        <img src="http://flexslider.woothemes.com/images/kitchen_adventurer_lemon.jpg"/>
+                                    </li>
+                                    <li>
+                                        <img src="http://flexslider.woothemes.com/images/kitchen_adventurer_donut.jpg"/>
+                                    </li>
+                                    <li>
+                                        <img src="http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg"/>
+                                    </li>
+                                    <li>
+                                        <img src="http://flexslider.woothemes.com/images/kitchen_adventurer_cheesecake_brownie.jpg"/>
+                                    </li>
+                                    <li>
+                                        <img src="http://flexslider.woothemes.com/images/kitchen_adventurer_lemon.jpg"/>
+                                    </li>
+                                    <li>
+                                        <img src="http://flexslider.woothemes.com/images/kitchen_adventurer_donut.jpg"/>
+                                    </li>
+                                    <li>
+                                        <img src="http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg"/>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="carousel" class="flexslider">
+                                <ul class="slides">
+                                    <li>
+                                        <img src="assets/logos/scratch.png"/>
+                                    </li>
+                                    <li>
+                                        <img src="http://flexslider.woothemes.com/images/kitchen_adventurer_lemon.jpg"/>
+                                    </li>
+                                    <li>
+                                        <img src="http://flexslider.woothemes.com/images/kitchen_adventurer_donut.jpg"/>
+                                    </li>
+                                    <li>
+                                        <img src="http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg"/>
+                                    </li>
+                                    <li>
+                                        <img src="http://flexslider.woothemes.com/images/kitchen_adventurer_cheesecake_brownie.jpg"/>
+                                    </li>
+                                    <li>
+                                        <img src="http://flexslider.woothemes.com/images/kitchen_adventurer_lemon.jpg"/>
+                                    </li>
+                                    <li>
+                                        <img src="http://flexslider.woothemes.com/images/kitchen_adventurer_donut.jpg"/>
+                                    </li>
+                                    <li>
+                                        <img src="http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg"/>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+
+                    </div>
+
+                    
+                </div>
             </section>
         </div>
 
@@ -111,8 +331,8 @@
         <div ng-controller="TeachController" class="teach">
             <section id="teach" ng-hide="teachSectionIsHidden()" class="animation animation-left">
                 <div class="content">
-                    <main>Chcesz nauczać programowania?</main>
-                    <aside>Dowiedz się, jak to zrobić</aside>
+                    <main>Chcesz rozwijać innych?</main>
+                    <aside>Poznaj metody nauczania programowania</aside>
 
                     <nav>
                         <figure id="club" ng-click="selectClubSection()">
@@ -140,6 +360,7 @@
         <section id="why">
             <div class="content">
                 <main>Dlaczego warto?</main>
+                <aside>Poznaj korzyści z programowania.</aside>
 
                 <nav>
                     <figure id="language">
@@ -169,8 +390,16 @@
                     </div>
                 </div>
                 <div class="description">
-                    <div class="full_description"></div>
-                    <div class="programming_benefits"></div>
+                    <div class="full_description">
+                        <h1>Powinieneś uczyć się programowania, bo…</h1>
+                        <p>Wcale nie po to by zostać programistą. Owszem możesz nim zostać, ale umiejętność programowania otworzy przed Tobą możliwości w niemal każdej dziedzinie. Od finansów, przez sztukę po medycynę czy tuning samochodów. Problem polega na tym, że nie ma co liczyć na to, że programowania nauczą nas w szkole. Chociaż… może to i dobrze?</p>
+                        <p>W internecie można znaleźć mnóstwo kursów programowania. Darmowych! Z pomocą przychodzą też organizacje i fundacje. Dzięki łatwo dostępnej wiedzy, także tej specjalistycznej, można w tej dziedzinie zajść naprawdę daleko. Relatywnie szybko nabyć umiejętności, które pozwolą na samodzielne realizowanie różnorodnych projektów, rozwijanie pasji, ciekawą pracę i zarabianie pieniędzy. </p>
+                    </div>
+                    <div class="programming_benefits">
+                        <h1>Dzięki programowaniu…</h1>
+                        <p>Poznajemy sposób, w jaki działają urządzenia, które nas otaczają, i z których korzystamy niemal nonstop.</p>
+                        <p>Przestajemy być ich niewolnikami, możemy je kontrolować. A być może nawet tworzyć z ich pomocą coś zupełnie nowego - zaprogramować robota, który będzie pilnował Twojego domu. Albo lodówkę, która będzie Cię informowała, ile możesz zjeść w zależności od ilości wykonanych danego dnia aktywności fizycznych. Brzmi kosmicznie? Takich rzeczy można się podejmować będąc zaledwie początkującym programistą.</p>
+                    </div>
                 </div>
             </div>
 
@@ -193,7 +422,7 @@
                         <img src="assets/sygnet1.png" alt="Logo koduj.com"/>
                         <div id="motto">
                             <div id="motto1">Programowanie to przyszłość.</div>
-                            <div id="motto2">Zacznij już dziś</div> 
+                            <div id="motto2">Zacznij z nami!</div> 
                         </div>
                     </div>
 
@@ -212,10 +441,6 @@
                             <a target="_blank" href="https://www.youtube.com/channel/UCKb10KVB1XCVYnnGEaXmP_Q"><img src="assets/youtube.png" alt="YouTube"/></a>
                         </span>
 
-                        <span id="pinterest">
-                            <a target="_blank" href=""><img src="assets/pinterest.png" alt="Pinterest"/></a>
-                        </span>
-
                         <span id="google_plus">
                             <a target="_blank" href=""><img src="assets/googleplus.png" alt="Google Plus"/></a>
                         </span>
@@ -226,11 +451,17 @@
                     <nav id="footer_nav">
                     <ul>
                         <li id="about_us"><a href="">O nas</a></li>
+                        
+                        <!-- For further development
                         <li id="team"><a href="">Zespół</a></li>
                         <li id="contact"><a href="">Kontakt</a></li>
                         <li id="blog"><a href="">Blog</a></li>
+                        !-->
+                        
                     </ul>
                 </nav>
+                
+                    <div id="contact"><a href="mailto:kontakt@koduj.com" style="color: white">kontakt@koduj.com</a></div>
                 </div>
 
             </div>
