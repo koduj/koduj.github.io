@@ -486,6 +486,8 @@ div.learn, div.teach {
     padding-bottom: 25px;
     line-height: 1.2;
     margin-right: 105px;
+    width: 784px;
+    height: 358px;
 }
 
 #onlineSection .slides .icons_online {
