@@ -443,12 +443,6 @@ div.learn, div.teach {
     to { left : -100%; }
 }
 
-/* CAROUSEL */
-.flexslider-container {
-    width: 50%;
-    margin: 10px auto;
-}
-
 /* Learn online */
 #onlineSection {
     padding-top: 35px;
@@ -520,79 +514,5 @@ div.learn, div.teach {
 }
 
 #onlineSection .slides .icons_online p {
-    margin-top: 10px;
-}
-
-/* Learn in group */
-#onlineSection {
-    padding-top: 35px;
-    padding-bottom: 30px;
-}
-
-/* Learn oline */
-#groupSection .slides {
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 25px;
-    padding-bottom: 25px;
-}
-
-#groupSection .slides .about_online h1 {
-    font-family: 'Arimo', sans-serif;
-    font-weight: 700;
-    font-size: 48pt;
-    color: #ef3d6c;
-    padding-bottom: 25px;
-}
-
-#groupSection .slides .about_online h2 {
-    font-family: 'Arimo', sans-serif;
-    font-weight: 700;
-    font-size: 24pt;
-    color: #ef3d6c;
-    padding-bottom: 25px;
-}
-
-#groupSection .slides .about_online p {
-    font-family: 'Arimo', sans-serif;
-    font-weight: 400;
-    font-size: 11pt;
-    color: black;
-    padding-bottom: 25px;
-    line-height: 1.2;
-    margin-right: 105px;
-}
-
-#groupSection .slides .icons_online {
-    float: left;
-    margin-top: 25px;
-    text-align: center;
-}
-
-#groupSection .slides .icons_online .link {
-    float: left;
-    margin-right: 50px;
-}
-
-#groupSection .slides .icons_online .cost {
-    float: left;
-    margin-right: 50px;
-}
-
-#groupSection .slides .icons_online .age {
-    float: left;
-    margin-right: 50px;
-}
-
-#groupSection .slides .icons_online .language {
-    float: left;
-    margin-right: 50px;
-}
-
-#groupSection .slides .icons_online .level {
-    float: left;
-}
-
-#groupSection .slides .icons_online p {
     margin-top: 10px;
 }
