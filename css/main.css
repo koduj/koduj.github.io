@@ -460,7 +460,7 @@ div.learn, div.teach {
     font-family: 'Arimo', sans-serif;
     font-weight: 700;
     font-size: 48pt;
-    color: #ef3d6c;
+    color: white;
     padding-bottom: 25px;
 }
 
@@ -476,12 +476,10 @@ div.learn, div.teach {
     font-family: 'Arimo', sans-serif;
     font-weight: 400;
     font-size: 11pt;
-    color: black;
+    color: white;
     padding-bottom: 25px;
     line-height: 1.2;
     margin-right: 105px;
-    width: 784px;
-    height: 358px;
 }
 
 #onlineSection .slides .icons_online {
