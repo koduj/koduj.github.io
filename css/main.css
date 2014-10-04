@@ -443,6 +443,12 @@ div.learn, div.teach {
     to { left : -100%; }
 }
 
+.rn-carousel-control {
+    font-size: 50px !important;
+    color: white;
+    opacity: 1;
+}
+
 /* Learn online */
 #onlineSection {
     padding-top: 35px;
