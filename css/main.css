@@ -496,11 +496,6 @@ div.learn, div.teach {
     text-align: center;
 }
 
-#onlineSection img {
-    height: 48px;
-    width: 48px;
-}
-
 #onlineSection .slides .icons_online .link {
     float: left;
     margin-right: 50px;
@@ -526,11 +521,6 @@ div.learn, div.teach {
 
 #onlineSection .slides .icons_online p {
     margin-top: 10px;
-}
-
-#carousel .slides img {
-    width: 75px;
-    height: 75px;
 }
 
 /* Learn in group */
@@ -577,11 +567,6 @@ div.learn, div.teach {
     float: left;
     margin-top: 25px;
     text-align: center;
-}
-
-#groupSection img {
-    height: 48px;
-    width: 48px;
 }
 
 #groupSection .slides .icons_online .link {
