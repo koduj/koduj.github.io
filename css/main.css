@@ -474,8 +474,9 @@ div.learn, div.teach {
     font-family: 'Arimo', sans-serif;
     font-weight: 700;
     font-size: 24pt;
-    color: #ef3d6c;
-    padding-bottom: 25px;
+    color: white;
+    margin-bottom: 25px;
+    margin-top: 25px;
 }
 
 #onlineSection .slides .about_online p {
@@ -483,14 +484,12 @@ div.learn, div.teach {
     font-weight: 400;
     font-size: 11pt;
     color: white;
-    padding-bottom: 25px;
     line-height: 1.2;
-    margin-right: 105px;
 }
 
 #onlineSection .slides .icons_online {
     float: left;
-    margin-top: 25px;
+    margin-top: 50px;
     text-align: center;
 }
 
@@ -518,5 +517,9 @@ div.learn, div.teach {
 }
 
 #onlineSection .slides .icons_online p {
+    font-family: 'Arimo', sans-serif;
+    font-weight: 400;
+    font-size: 11pt;
+    color: white;
     margin-top: 10px;
 }
