@@ -449,18 +449,23 @@ div.learn, div.teach {
     opacity: 1;
 }
 
+ul.slides {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+ul.slides > li {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
 /* Learn online */
 #onlineSection {
     padding-top: 35px;
     padding-bottom: 30px;
 }
 
-#onlineSection ul.slides {
-    padding-top: 25px;
-    padding-bottom: 25px;
-}
-
-#onlineSection ul.slides .about_online h1 {
+#onlineSection .about_online h1 {
     font-family: 'Arimo', sans-serif;
     font-weight: 700;
     font-size: 48pt;
@@ -468,7 +473,7 @@ div.learn, div.teach {
     padding-bottom: 25px;
 }
 
-#onlineSection ul.slides .about_online h2 {
+#onlineSection .about_online h2 {
     font-family: 'Arimo', sans-serif;
     font-weight: 700;
     font-size: 24pt;
@@ -477,7 +482,7 @@ div.learn, div.teach {
     margin-top: 25px;
 }
 
-#onlineSection ul.slides .about_online p {
+#onlineSection .about_online p {
     font-family: 'Arimo', sans-serif;
     font-weight: 400;
     font-size: 11pt;
@@ -485,36 +490,36 @@ div.learn, div.teach {
     line-height: 1.2;
 }
 
-#onlineSection ul.slides .icons_online {
+#onlineSection .icons_online {
     float: left;
     margin-top: 50px;
     text-align: center;
 }
 
-#onlineSection ul.slides .icons_online .link {
+#onlineSection .icons_online .link {
     float: left;
     margin-right: 50px;
 }
 
-#onlineSection ul.slides .icons_online .cost {
+#onlineSection .icons_online .cost {
     float: left;
     margin-right: 50px;
 }
 
-#onlineSection ul.slides .icons_online .age {
+#onlineSection .icons_online .age {
     float: left;
     margin-right: 50px;
 }
-#onlineSection ul.slides .icons_online .language {
+#onlineSection .icons_online .language {
     float: left;
     margin-right: 50px;
 }
 
-#onlineSection ul.slides .icons_online .level {
+#onlineSection .icons_online .level {
     float: left;
 }
 
-#onlineSection ul.slides .icons_online p {
+#onlineSection .icons_online p {
     font-family: 'Arimo', sans-serif;
     font-weight: 400;
     font-size: 11pt;
