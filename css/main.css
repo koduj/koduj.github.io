@@ -455,14 +455,12 @@ div.learn, div.teach {
     padding-bottom: 30px;
 }
 
-#onlineSection .slides {
-    padding-left: 50px;
-    padding-right: 50px;
+#onlineSection ul.slides {
     padding-top: 25px;
     padding-bottom: 25px;
 }
 
-#onlineSection .slides .about_online h1 {
+#onlineSection ul.slides .about_online h1 {
     font-family: 'Arimo', sans-serif;
     font-weight: 700;
     font-size: 48pt;
@@ -470,7 +468,7 @@ div.learn, div.teach {
     padding-bottom: 25px;
 }
 
-#onlineSection .slides .about_online h2 {
+#onlineSection ul.slides .about_online h2 {
     font-family: 'Arimo', sans-serif;
     font-weight: 700;
     font-size: 24pt;
@@ -479,7 +477,7 @@ div.learn, div.teach {
     margin-top: 25px;
 }
 
-#onlineSection .slides .about_online p {
+#onlineSection ul.slides .about_online p {
     font-family: 'Arimo', sans-serif;
     font-weight: 400;
     font-size: 11pt;
@@ -487,36 +485,36 @@ div.learn, div.teach {
     line-height: 1.2;
 }
 
-#onlineSection .slides .icons_online {
+#onlineSection ul.slides .icons_online {
     float: left;
     margin-top: 50px;
     text-align: center;
 }
 
-#onlineSection .slides .icons_online .link {
+#onlineSection ul.slides .icons_online .link {
     float: left;
     margin-right: 50px;
 }
 
-#onlineSection .slides .icons_online .cost {
+#onlineSection ul.slides .icons_online .cost {
     float: left;
     margin-right: 50px;
 }
 
-#onlineSection .slides .icons_online .age {
+#onlineSection ul.slides .icons_online .age {
     float: left;
     margin-right: 50px;
 }
-#onlineSection .slides .icons_online .language {
+#onlineSection ul.slides .icons_online .language {
     float: left;
     margin-right: 50px;
 }
 
-#onlineSection .slides .icons_online .level {
+#onlineSection ul.slides .icons_online .level {
     float: left;
 }
 
-#onlineSection .slides .icons_online p {
+#onlineSection ul.slides .icons_online p {
     font-family: 'Arimo', sans-serif;
     font-weight: 400;
     font-size: 11pt;
