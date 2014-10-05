@@ -1,9 +1,6 @@
 /* GENERAL STYLING */
 body {
     font-family: 'Arimo', sans-serif;
-    margin: 0;
-    padding: 0;
-    width: 100%;
     background-color: white;
 }
 
@@ -53,8 +50,6 @@ header {
     background-color: #2b2a27;
     position: fixed;
     z-index: 1;
-    padding-top: 18px;
-    padding-bottom: 18px;
 }
 
 header #top {
@@ -452,11 +447,6 @@ div.learn, div.teach {
 ul.slides {
     padding-top: 25px;
     padding-bottom: 25px;
-}
-
-ul.slides > li {
-    margin-left: 50px;
-    margin-right: 50px;
 }
 
 /* Learn online */
