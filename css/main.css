@@ -456,6 +456,11 @@ ul.slides {
     padding-bottom: 30px;
 }
 
+#groupSection {
+    padding-top: 35px;
+    padding-bottom: 30px;
+}
+
 .about_online h1 {
     font-family: 'Arimo', sans-serif;
     font-weight: 700;
@@ -488,6 +493,11 @@ ul.slides {
 }
 
 .icons_online .link {
+    float: left;
+    margin-right: 50px;
+}
+
+.icons_online .city {
     float: left;
     margin-right: 50px;
 }
