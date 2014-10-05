@@ -29,7 +29,7 @@
                     var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) + ']');
                     var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
                     if ($target) {
-                        var targetOffset = $target.offset().top;
+                        var targetOffset = $target.offset().top - 60;
 
                         $(this).click(function () {
                             $("#nav li a").removeClass("active");
@@ -57,7 +57,11 @@
 <header>
     <div id="top"></div>
     <div class="content">
-        <div id="logo"><img src="assets/logo1.png" alt="Logo koduj.com"/></div>
+        <div id="logo">
+			<a href="#">
+			<img src="assets/logo1.png" alt="Logo koduj.com"/>
+			</a>
+		</div>
 
         <nav>
             <ul>
@@ -107,8 +111,7 @@
                 <li id="scratch">
                     <div class="about_online">
                         <h1>Scratch</h1>
-
-                        <p>Scratch to edukacyjny język obiektowy, stworzony jako środek do nauczania dzieci i młodzieży (od
+						<p>Scratch to edukacyjny język obiektowy, stworzony jako środek do nauczania dzieci i młodzieży (od
                             8 lat wzwyż) podstawprogramowania oraz środowisko programistyczne służące do tworzenia i
                             uruchamiania programów w tym języku. Scratch umożliwia łatwe tworzenie interaktywnych
                             historyjek, animacji, gier, muzyki. Programowanie odbywa się w sposób wizualny - elementy języka
@@ -155,8 +158,8 @@
                 <li id="khan_academy">
                                        
                     <div class="about_online">
-                        <h1>Khan Academy</h1>
-
+						<h1>Khan Academy</h1>
+						
                         <p>Khan Academy to organizacja non-profit, która chce zmienić raz na zawsze podejście 
                             do edukacji publicznej przez udostępnienie kształcenia na światowym poziomie wszędzie 
                             i dla każdego. Oprócz filmów wideo z polskim lektorem, zachęcamy do oglądania filmów 
