@@ -18,3 +18,4 @@ dist
 /bin
 /nbproject
 node_modules/
+.DS_Store

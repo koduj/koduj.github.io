@@ -5,7 +5,8 @@
 var kodujApp = angular.module('KodujComApp', [
     'app.directives',
     'ngSanitize',
-    'ngAnimate'
+    'ngAnimate',
+    'angular-carousel'
 ])
 
 marked.setOptions({
