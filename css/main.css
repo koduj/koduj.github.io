@@ -50,6 +50,7 @@ header {
     background-color: #2b2a27;
     position: fixed;
     z-index: 1;
+    padding-top: 18px;
 }
 
 header #top {
@@ -455,7 +456,12 @@ ul.slides {
     padding-bottom: 30px;
 }
 
-#onlineSection .about_online h1 {
+#groupSection {
+    padding-top: 35px;
+    padding-bottom: 30px;
+}
+
+.about_online h1 {
     font-family: 'Arimo', sans-serif;
     font-weight: 700;
     font-size: 48pt;
@@ -463,7 +469,7 @@ ul.slides {
     padding-bottom: 25px;
 }
 
-#onlineSection .about_online h2 {
+.about_online h2 {
     font-family: 'Arimo', sans-serif;
     font-weight: 700;
     font-size: 24pt;
@@ -472,7 +478,7 @@ ul.slides {
     margin-top: 25px;
 }
 
-#onlineSection .about_online p {
+.about_online p {
     font-family: 'Arimo', sans-serif;
     font-weight: 400;
     font-size: 11pt;
@@ -480,36 +486,42 @@ ul.slides {
     line-height: 1.2;
 }
 
-#onlineSection .icons_online {
+.icons_online {
     float: left;
     margin-top: 50px;
     text-align: center;
 }
 
-#onlineSection .icons_online .link {
+.icons_online .link {
     float: left;
     margin-right: 50px;
 }
 
-#onlineSection .icons_online .cost {
+.icons_online .city {
     float: left;
     margin-right: 50px;
 }
 
-#onlineSection .icons_online .age {
-    float: left;
-    margin-right: 50px;
-}
-#onlineSection .icons_online .language {
+.icons_online .cost {
     float: left;
     margin-right: 50px;
 }
 
-#onlineSection .icons_online .level {
+.icons_online .age {
+    float: left;
+    margin-right: 50px;
+}
+
+.icons_online .language {
+    float: left;
+    margin-right: 50px;
+}
+
+.icons_online .level {
     float: left;
 }
 
-#onlineSection .icons_online p {
+.icons_online p {
     font-family: 'Arimo', sans-serif;
     font-weight: 400;
     font-size: 11pt;
