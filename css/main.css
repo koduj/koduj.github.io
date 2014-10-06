@@ -51,7 +51,6 @@ header {
     position: fixed;
     z-index: 1;
     padding-top: 18px;
-	box-shadow: 0px 5px 15px #888888;
 }
 
 header #top {
@@ -462,11 +461,6 @@ ul.slides {
     padding-bottom: 30px;
 }
 
-.about_online {
-	margin-left:  1.5em;
-	margin-right: 1.5em;
-}
-
 .about_online h1 {
     font-family: 'Arimo', sans-serif;
     font-weight: 700;
@@ -496,8 +490,6 @@ ul.slides {
     float: left;
     margin-top: 50px;
     text-align: center;
-	margin-left:  1.5em;
-	margin-right: 1.5em;
 }
 
 .icons_online .link {
