@@ -29,7 +29,9 @@
                     var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) + ']');
                     var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
                     if ($target) {
-                        var targetOffset = $target.offset().top;
+					    
+						var headerHeight = 60;
+                        var targetOffset = $target.offset().top - headerHeight;
 
                         $(this).click(function () {
                             $("#nav li a").removeClass("active");
@@ -56,17 +58,19 @@
 <!-- NAVIGATION BAR -->
 <header>
     <div id="top"></div>
-    <div class="content">
-        <div id="logo"><img src="assets/logo1.png" alt="Logo koduj.com"/></div>
+	<div class="content">
+		<div id="logo">
+			<a href="#"><img src="assets/logo1.png" alt="Logo koduj.com"/></a>
+		</div>
 
-        <nav>
-            <ul>
-                <li id="nav-learn"><a href="#learn">ucz się</a></li>
-                <li id="nav-teach"><a href="#teach">ucz innych</a></li>
-                <li id="nav-why"><a href="#why">dlaczego warto</a></li>
-            </ul>
-        </nav>
-    </div>
+		<nav>
+			<ul>
+				<li id="nav-learn"><a href="#learn">ucz się</a></li>
+				<li id="nav-teach"><a href="#teach">ucz innych</a></li>
+				<li id="nav-why"><a href="#why">dlaczego warto</a></li>
+			</ul>
+		</nav>
+	</div>
 </header>
 
 <!-- INTRODUCTORY VIDEO section -->
