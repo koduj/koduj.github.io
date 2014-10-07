@@ -29,7 +29,9 @@
                     var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) + ']');
                     var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
                     if ($target) {
-                        var targetOffset = $target.offset().top;
+                        
+                        var headerHeight = 60;
+                        var targetOffset = $target.offset().top - headerHeight;
 
                         $(this).click(function () {
                             $("#nav li a").removeClass("active");
@@ -57,7 +59,9 @@
 <header>
     <div id="top"></div>
     <div class="content">
-        <div id="logo"><img src="assets/logo1.png" alt="Logo koduj.com"/></div>
+        <div id="logo">
+            <a href="#"><img src="assets/logo1.png" alt="Logo koduj.com"/></a>
+        </div>
 
         <nav>
             <ul>
