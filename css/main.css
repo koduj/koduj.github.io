@@ -451,6 +451,15 @@ ul.slides {
     padding-bottom: 25px;
 }
 
+.link a {
+    text-decoration:none;
+}
+
+.link a:hover {
+    color: white;
+    text-shadow: 1px 1px 1px #B3B3B3;
+}
+
 /* Learn online */
 #onlineSection {
     padding-top: 35px;
