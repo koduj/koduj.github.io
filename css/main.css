@@ -471,7 +471,7 @@ ul.slides {
 }
 
 #groupSection {
-    padding-top: 35px;
+    padding-top: 75px;
     padding-bottom: 30px;
 }
 
@@ -549,9 +549,14 @@ ul.slides {
     margin-top: 10px;
 }
 
+/* Teach section */
+
+#clubSection {
+    padding-top: 75px;
+}
+
 .icons_club {
     float: left;
-    margin-top: 75px;
     margin-bottom: 30px;
     text-align: center;
 }
@@ -569,6 +574,7 @@ ul.slides {
     font-weight: 400;
     font-size: 10pt;
     color: white;
+    line-height: 1.2;
     margin-top: 10px;
 }
 
