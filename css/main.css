@@ -1,4 +1,8 @@
 /* GENERAL STYLING */
+strong {
+    font-weight: 700;
+}
+
 body {
     font-family: 'Arimo', sans-serif;
     background-color: white;
@@ -453,7 +457,7 @@ ul.slides {
 
 /* Learn online */
 #onlineSection {
-    padding-top: 35px;
+    padding-top: 75px;
     padding-bottom: 30px;
 }
 
@@ -488,7 +492,7 @@ ul.slides {
 .about_online p {
     font-family: 'Arimo', sans-serif;
     font-weight: 400;
-    font-size: 11pt;
+    font-size: 12pt;
     color: white;
     line-height: 1.2;
 }
@@ -534,4 +538,97 @@ ul.slides {
     font-size: 11pt;
     color: white;
     margin-top: 10px;
+}
+
+.icons_club {
+    float: left;
+    margin-top: 75px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.icons_club h5 {
+    font-family: 'Arimo', sans-serif;
+    font-weight: 700;
+    font-size: 12pt;
+    color: white;
+    margin-top: 10px;
+}
+
+.icons_club p{
+    font-family: 'Arimo', sans-serif;
+    font-weight: 400;
+    font-size: 10pt;
+    color: white;
+    margin-top: 10px;
+}
+
+.icons_club .volunteers {
+    float: left;
+    margin-right: 20px;
+}
+
+.icons_club .materials {
+    float: left;
+    margin-right: 20px;
+}
+
+.icons_club .place {
+    float: left;
+    margin-right: 20px;
+}
+
+.icons_club .students {
+    float: left;
+    margin-right: 20px;
+}
+
+.icons_club .plus {
+    float: left;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+#code_club_main .logo_club {
+    width: 22%; 
+    margin: auto
+}
+
+.logo_club #equals {
+    float: left;
+    margin-right: 15px;
+    margin-top: 40px;
+}
+
+#code_club_main .club_description {
+    font-family: 'Arimo', sans-serif;
+    font-weight: 400;
+    font-size: 12pt;
+    line-height: 1.2;
+    color: white;
+    padding-top: 50px;
+}
+
+.code_club_slide_icon {
+    width: 10%; 
+    margin: auto;
+    padding-top: 75px;
+    padding-bottom: 30px;
+}
+
+.code_club_slide h1 {
+    font-family: 'Arimo', sans-serif;
+    font-weight: 700;
+    font-size: 32pt;
+    text-align: center;
+    color: white;
+}
+
+.code_club_slide p {
+    font-family: 'Arimo', sans-serif;
+    font-weight: 400;
+    font-size: 12pt;
+    line-height: 1.2;
+    color: white;
+    padding-top: 30px;
 }
