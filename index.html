@@ -102,9 +102,7 @@
     </section>
 
     <section id="onlineSection" ng-show="onlineSectionIsChoosen" class="animation animation-left">
-        <!--TYMCZASOWA IKONA :) :)-->
-        <img src="assets/close.png" style="float: right; margin-right: 15%"
-             ng-click="hideOnlineSection()"/>
+        <img src="assets/close.png" style="float: right; margin-right: 15%" ng-click="hideOnlineSection()"/>
 
         <div class="content">
             <ul rn-carousel rn-carousel-control class="slides">
@@ -346,7 +344,6 @@
     </section>
 
     <section id="groupSection" ng-show="groupSectionIsChoosen" class="animation animation-left">
-        <!--TYMCZASOWA IKONA :) :)-->
         <img src="assets/close.png" style="float: right; margin-right: 15%"
              ng-click="hideGroupSection()"/>
         
@@ -1328,9 +1325,7 @@
         </div>
     </section>
     <section id="clubSection" ng-show="clubSectionIsChosen" class="animation animation-left">
-        <!--TYMCZASOWA IKONA :) :)-->
-        <img src="assets/close.png" style="float: right; margin-right: 15%"
-             ng-click="hideClubSection()"/>
+        <img src="assets/close.png" style="float: right; margin-right: 15%" ng-click="hideClubSection()"/>
         
         <div class="content">
             <ul rn-carousel rn-carousel-control class="slides">
@@ -1527,7 +1522,6 @@
     </section>
     
     <section id="workshopsSection" ng-show="workshopsSectionIsChosen" class="animation animation-left">
-        <!--TYMCZASOWA IKONA :) :)-->
         <img src="assets/close.png" style="float: right; margin-right: 15%"
              ng-click="hideWorkshopsSection()"/>
         
@@ -1540,25 +1534,35 @@
 </div>
 
 <!-- WHY section -->
-<section id="why">
-    <div class="content">
-        <main>Dlaczego warto?</main>
-        <aside>Poznaj korzyści z programowania.</aside>
+<div ng-controller="WhyController" class="why">
+    <section id="why" ng-hide="whySectionIsHidden()" class="animation animation-left">
+        <div class="content">
+            <main>Dlaczego warto?</main>
+            <aside>Poznaj korzyści z programowania.</aside>
 
-        <nav>
-            <figure id="language">
-                <figcaption>kodowanie<br>to trzeci język</figcaption>
-            </figure>
-            <figure id="poland">
-                <figcaption>Polska potrzebuje<br>programistów</figcaption>
-            </figure>
-            <figure id="consumption">
-                <figcaption>dosyć biernej<br>konsumpcji</figcaption>
-            </figure>
-        </nav>
-    </div>
-</section>
-
+            <nav>
+                <figure id="language" ng-click="selectLanguageSection()">
+                    <figcaption>kodowanie<br>to trzeci język</figcaption>
+                </figure>
+                <figure id="poland" ng-click="selectPolandSection()">
+                    <figcaption>Polska potrzebuje<br>programistów</figcaption>
+                </figure>
+                <figure id="consumption" ng-click="selectConsumptionSection()">
+                    <figcaption>dosyć biernej<br>konsumpcji</figcaption>
+                </figure>
+            </nav>
+        </div>
+    </section>
+    <section id="languageSection" ng-show="languageSectionIsChosen" class="animation animation-left">
+        <img src="assets/close.png" style="float: right; margin-right: 15%" ng-click="hideLanguageSection()"/>
+    </section>
+    <section id="polandSection" ng-show="polandSectionIsChosen" class="animation animation-left">
+        <img src="assets/close.png" style="float: right; margin-right: 15%" ng-click="hidePolandSection()"/>
+    </section>
+    <section id="consumptionSection" ng-show="consumptionSectionIsChosen" class="animation animation-left">
+        <img src="assets/close.png" style="float: right; margin-right: 15%" ng-click="hideConsumptionSection()"/>
+    </section>
+</div>
 <!-- BE LIKE THEM section -->
 <section id="be_like_them">
     <div class="content">

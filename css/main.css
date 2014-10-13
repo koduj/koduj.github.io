@@ -182,10 +182,13 @@ nav li a:hover {
 
 /* WHY SECTION */
 #why {
-    width: 100%;
-    height: 490px;
     background-image: url('../assets/background.png');
     background-repeat: repeat;
+}
+
+#why, #languageSection, #polandSection, #consumptionSection {
+    width: 100%;
+    height: 490px;
 }
 
 #why figure {
@@ -200,16 +203,21 @@ nav li a:hover {
 }
 
 #why #language {
-    background-color: #7da2b9;
     margin-right: 26px;
+}
+
+#language, #languageSection {
+    background-color: #7da2b9;
 }
 
 #why #poland {
-    background-color: #bf5b9d;
     margin-right: 26px;
 }
 
-#why #consumption {
+#poland, #polandSection {
+    background-color: #bf5b9d;
+}
+#consumption, #consumptionSection {
     background-color: #e0cc5e;
 }
 
@@ -401,7 +409,7 @@ footer #contact {
     background-color: #6a9fa7;
 }
 
-div.learn, div.teach {
+div.learn, div.teach, div.why {
     position: relative;
 }
 
