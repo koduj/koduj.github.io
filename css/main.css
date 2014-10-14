@@ -655,3 +655,57 @@ ul.slides {
     color: white;
     padding-top: 30px;
 }
+
+.bulletpoints li {
+    list-style: circle;
+}
+
+/* Workshop section */
+#workshopsSection {
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+#workshopsSection ul li h1 {
+    font-family: 'Arimo', sans-serif;
+    font-weight: 700;
+    font-size: 48pt;
+    color: white;
+}
+
+#workshopsSection ul li h2 {
+    font-family: 'Arimo', sans-serif;
+    font-weight: 700;
+    font-size: 24pt;
+    color: white;
+    margin-bottom: 15px;
+    margin-top: 25px;
+}
+
+#workshopsSection ul li h3 {
+    font-family: 'Arimo', sans-serif;
+    font-weight: 400;
+    font-size: 24pt;
+    color: white;
+}
+
+#workshopsSection ul li h4 {
+    font-family: 'Arimo', sans-serif;
+    font-weight: 400;
+    font-size: 16pt;
+    line-height: 1.2;
+    color: white;
+    margin-top: 30px;
+}
+
+#workshopsSection ul li p {
+    font-family: 'Arimo', sans-serif;
+    font-weight: 400;
+    font-size: 12pt;
+    line-height: 1.2;
+    color: white;
+}
+
+#workshopsSection ul li .workshops_link {
+    margin-top: 30px;
+}
