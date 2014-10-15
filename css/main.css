@@ -418,6 +418,7 @@ div.learn, div.teach, div.why {
     position : absolute;
     top      : 0;
     width    : 100%;
+    z-index: 100;
 }
 
 /* left animation */
