@@ -709,3 +709,90 @@ ul.slides {
 #workshopsSection ul li .workshops_link {
     margin-top: 30px;
 }
+
+/* Why section */
+
+#languageSection {
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+#languageSection h2 {
+    font-family: 'Arimo', sans-serif;
+    font-weight: 700;
+    font-size: 24pt;
+    color: white;
+    margin-bottom: 15px;
+    margin-top: 25px;
+}
+
+#languageSection ul li p {
+    font-family: 'Arimo', sans-serif;
+    font-weight: 400;
+    font-size: 12pt;
+    line-height: 1.2;
+    color: white;
+    margin-top: 25px;
+}
+
+#polandSection {
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+#polandSection p {
+    font-family: 'Arimo', sans-serif;
+    font-weight: 400;
+    font-size: 12pt;
+    line-height: 1.2;
+    color: white;
+    margin-top: 25px;
+}
+
+#polandSection .quote {
+    width: 500px;
+    font-family: 'Arimo', sans-serif;
+    font-weight: 400;
+    font-size: 11pt;
+    font-style: italic;
+    line-height: 1.4;
+    color: white;
+}
+
+#polandSection .author {
+    width: 500px;
+    font-family: 'Arimo', sans-serif;
+    font-weight: 700;
+    font-size: 11pt;
+    font-style: italic;
+    color: white;
+    margin-bottom: 75px;
+}
+
+#polandSection .right {
+    text-align: right;
+    margin-left: 460px;
+}
+
+#polandSection .left {
+    text-align: left;
+    margin-right: 460px;
+}
+
+#polandSection #bottom {
+    margin-top: 75px;
+}
+
+#consumptionSection {
+    padding-top: 75px;
+    padding-bottom: 75px;
+} 
+
+#consumptionSection p {
+    font-family: 'Arimo', sans-serif;
+    font-weight: 400;
+    font-size: 12pt;
+    line-height: 1.2;
+    color: white;
+    margin-top: 25px;
+}
