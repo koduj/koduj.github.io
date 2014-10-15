@@ -47,7 +47,7 @@ main {
     color: white;
 }
 
-/* NAVIGATION BAR */
+/* ^^^^^^^^^^^^^ NAVIGATION BAR ^^^^^^^^^^^^^ */
 header {
     width: 100%;
     height: 60px;
@@ -107,13 +107,13 @@ nav li a:hover {
 }
 
 /*LEAKY ABSTRACTION*/
-
 .icons_online a:hover { /*Because this class was copy paste it is used in all sections*/
     color: white;
     text-shadow: 1px 1px 1px #B3B3B3;
 }
 
-/* INTRO SECTION */
+/* ^^^^^^^^^^^^^ INTRO SECTION ^^^^^^^^^^^^^ */
+
 #intro {
     width: 100%;
     height: 760px;
@@ -137,8 +137,7 @@ nav li a:hover {
     margin-top: 25px;
 }
 
-/* LEARN SECTION */
-
+/* ^^^^^^^^^^^^^ LEARN SECTION ^^^^^^^^^^^^^ */
 #learn {
     background-image: url('../assets/background.png');
     background-repeat: repeat;
@@ -165,14 +164,97 @@ nav li a:hover {
     background-color: #ba5ca3;
 }
 
-/* TEACH SECTION */
+/* ^^^^^ Learn online subsection ^^^^^ */
+#onlineSection {
+    padding-top: 75px;
+    padding-bottom: 30px;
+}
 
+#groupSection {
+    padding-top: 75px;
+    padding-bottom: 30px;
+}
+
+.about_online {
+    margin-left:  1.5em;
+    margin-right: 1.5em;
+}
+
+
+.about_online h1 {
+    font-family: 'Arimo', sans-serif;
+    font-weight: 700;
+    font-size: 48pt;
+    color: white;
+    padding-bottom: 25px;
+}
+
+.about_online h2 {
+    font-family: 'Arimo', sans-serif;
+    font-weight: 700;
+    font-size: 24pt;
+    color: white;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+.about_online p {
+    font-family: 'Arimo', sans-serif;
+    font-weight: 400;
+    font-size: 12pt;
+    color: white;
+    line-height: 1.2;
+}
+
+.icons_online {
+    float: left;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.icons_online .link {
+    float: left;
+    margin-right: 50px;
+}
+
+.icons_online .city {
+    float: left;
+    margin-right: 50px;
+}
+
+.icons_online .cost {
+    float: left;
+    margin-right: 50px;
+}
+
+.icons_online .age {
+    float: left;
+    margin-right: 50px;
+}
+
+.icons_online .language {
+    float: left;
+    margin-right: 50px;
+}
+
+.icons_online .level {
+    float: left;
+}
+
+.icons_online p {
+    font-family: 'Arimo', sans-serif;
+    font-weight: 400;
+    font-size: 11pt;
+    color: white;
+    margin-top: 10px;
+}
+
+/* ^^^^^^^^^^^^^ TEACH SECTION ^^^^^^^^^^^^^ */
 .carousel-content {
 	width: 95%;
     margin-left:  1.5em;
     margin-right: 1.5em;
 }
-
 
 #teach {
     background-color: #FFFFFF
@@ -199,7 +281,159 @@ nav li a:hover {
     height: 702px;
 }
 
-/* WHY SECTION */
+/* ^^^^^ teach codeclubs subsection ^^^^^ */
+#clubSection {
+    padding-top: 75px;
+}
+
+.icons_club {
+    float: left;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.icons_club h5 {
+    font-family: 'Arimo', sans-serif;
+    font-weight: 700;
+    font-size: 12pt;
+    color: white;
+    margin-top: 10px;
+}
+
+.icons_club p{
+    font-family: 'Arimo', sans-serif;
+    font-weight: 400;
+    font-size: 10pt;
+    color: white;
+    line-height: 1.2;
+    margin-top: 10px;
+}
+
+.icons_club .volunteers {
+    float: left;
+    margin-right: 20px;
+}
+
+.icons_club .materials {
+    float: left;
+    margin-right: 20px;
+}
+
+.icons_club .place {
+    float: left;
+    margin-right: 20px;
+}
+
+.icons_club .students {
+    float: left;
+    margin-right: 20px;
+}
+
+.icons_club .plus {
+    float: left;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+#code_club_main .logo_club {
+    width: 22%; 
+    margin: auto
+}
+
+.logo_club #equals {
+    float: left;
+    margin-right: 15px;
+    margin-top: 40px;
+}
+
+#code_club_main .club_description {
+    font-family: 'Arimo', sans-serif;
+    font-weight: 400;
+    font-size: 12pt;
+    line-height: 1.2;
+    color: white;
+    padding-top: 50px;
+}
+
+.code_club_slide_icon {
+    width: 10%; 
+    margin: auto;
+    padding-top: 75px;
+    padding-bottom: 30px;
+}
+
+.code_club_slide h1 {
+    font-family: 'Arimo', sans-serif;
+    font-weight: 700;
+    font-size: 32pt;
+    text-align: center;
+    color: white;
+}
+
+.code_club_slide p {
+    font-family: 'Arimo', sans-serif;
+    font-weight: 400;
+    font-size: 12pt;
+    line-height: 1.2;
+    color: white;
+    padding-top: 30px;
+}
+
+.bulletpoints li {
+    list-style: circle;
+}
+
+/* ^^^^^  teach workshops subsection ^^^^^ */
+#workshopsSection {
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+#workshopsSection ul li h1 {
+    font-family: 'Arimo', sans-serif;
+    font-weight: 700;
+    font-size: 48pt;
+    color: white;
+}
+
+#workshopsSection ul li h2 {
+    font-family: 'Arimo', sans-serif;
+    font-weight: 700;
+    font-size: 24pt;
+    color: white;
+    margin-bottom: 15px;
+    margin-top: 25px;
+}
+
+#workshopsSection ul li h3 {
+    font-family: 'Arimo', sans-serif;
+    font-weight: 400;
+    font-size: 24pt;
+    color: white;
+}
+
+#workshopsSection ul li h4 {
+    font-family: 'Arimo', sans-serif;
+    font-weight: 400;
+    font-size: 16pt;
+    line-height: 1.2;
+    color: white;
+    margin-top: 30px;
+}
+
+#workshopsSection ul li p {
+    font-family: 'Arimo', sans-serif;
+    font-weight: 400;
+    font-size: 12pt;
+    line-height: 1.2;
+    color: white;
+}
+
+#workshopsSection ul li .workshops_link {
+    margin-top: 30px;
+}
+
+/* ^^^^^^^^^^^^^ WHY SECTION ^^^^^^^^^^^^^ */
 #why {
     background-image: url('../assets/background.png');
     background-repeat: repeat;
@@ -218,7 +452,7 @@ nav li a:hover {
 }
 
 #why figcaption {
-    margin-top: 200px;
+    margin-top: 50px;
 }
 
 #why #language {
@@ -240,7 +474,92 @@ nav li a:hover {
     background-color: #e0cc5e;
 }
 
-/* BE LIKE THEM SECTION */
+#languageSection {
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+#languageSection h2 {
+    font-family: 'Arimo', sans-serif;
+    font-weight: 700;
+    font-size: 24pt;
+    color: white;
+    margin-bottom: 15px;
+    margin-top: 25px;
+}
+
+#languageSection ul li p {
+    font-family: 'Arimo', sans-serif;
+    font-weight: 400;
+    font-size: 12pt;
+    line-height: 1.2;
+    color: white;
+    margin-top: 25px;
+}
+
+#polandSection {
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+#polandSection p {
+    font-family: 'Arimo', sans-serif;
+    font-weight: 400;
+    font-size: 12pt;
+    line-height: 1.2;
+    color: white;
+    margin-top: 25px;
+}
+
+#polandSection .quote {
+    width: 500px;
+    font-family: 'Arimo', sans-serif;
+    font-weight: 400;
+    font-size: 11pt;
+    font-style: italic;
+    line-height: 1.4;
+    color: white;
+}
+
+#polandSection .author {
+    width: 500px;
+    font-family: 'Arimo', sans-serif;
+    font-weight: 700;
+    font-size: 11pt;
+    font-style: italic;
+    color: white;
+    margin-bottom: 75px;
+}
+
+#polandSection .right {
+    text-align: right;
+    margin-left: 400px;
+}
+
+#polandSection .left {
+    text-align: left;
+    margin-right: 460px;
+}
+
+#polandSection #bottom {
+    margin-top: 75px;
+}
+
+#consumptionSection {
+    padding-top: 75px;
+    padding-bottom: 75px;
+} 
+
+#consumptionSection p {
+    font-family: 'Arimo', sans-serif;
+    font-weight: 400;
+    font-size: 12pt;
+    line-height: 1.2;
+    color: white;
+    margin-top: 25px;
+}
+
+/* ^^^^^^^^^^^^^ BE LIKE THEM SECTION ^^^^^^^^^^^^^ */
 #be_like_them {
     width: 100%;
     height: 860px;
@@ -329,13 +648,13 @@ nav li a:hover {
     padding-bottom: 20px;
 }
 
-/* SUPPORT SECTION */
+/* ^^^^^^^^^^^^^ SUPPORT SECTION ^^^^^^^^^^^^^ */
 #support {
     width: 100%;
     height: 170px;
 }
 
-/* FOOTER */
+/* ^^^^^^^^^^^^^ FOOTER ^^^^^^^^^^^^^ */
 footer {
     width: 100%;
     height: 169px;
@@ -481,328 +800,4 @@ div.learn, div.teach, div.why {
 ul.slides {
     padding-top: 25px;
     padding-bottom: 25px;
-}
-
-/* Learn online */
-#onlineSection {
-    padding-top: 75px;
-    padding-bottom: 30px;
-}
-
-#groupSection {
-    padding-top: 75px;
-    padding-bottom: 30px;
-}
-
-.about_online {
-    margin-left:  1.5em;
-    margin-right: 1.5em;
-}
-
-.about_online h1 {
-    font-family: 'Arimo', sans-serif;
-    font-weight: 700;
-    font-size: 48pt;
-    color: white;
-    padding-bottom: 25px;
-}
-
-.about_online h2 {
-    font-family: 'Arimo', sans-serif;
-    font-weight: 700;
-    font-size: 24pt;
-    color: white;
-    margin-bottom: 25px;
-    margin-top: 25px;
-}
-
-.about_online p {
-    font-family: 'Arimo', sans-serif;
-    font-weight: 400;
-    font-size: 12pt;
-    color: white;
-    line-height: 1.2;
-}
-
-.icons_online {
-    float: left;
-    margin-top: 50px;
-    text-align: center;
-}
-
-.icons_online .link {
-    float: left;
-    margin-right: 50px;
-}
-
-.icons_online .city {
-    float: left;
-    margin-right: 50px;
-}
-
-.icons_online .cost {
-    float: left;
-    margin-right: 50px;
-}
-
-.icons_online .age {
-    float: left;
-    margin-right: 50px;
-}
-
-.icons_online .language {
-    float: left;
-    margin-right: 50px;
-}
-
-.icons_online .level {
-    float: left;
-}
-
-.icons_online p {
-    font-family: 'Arimo', sans-serif;
-    font-weight: 400;
-    font-size: 11pt;
-    color: white;
-    margin-top: 10px;
-}
-
-/* Teach section */
-
-#clubSection {
-    padding-top: 75px;
-}
-
-.icons_club {
-    float: left;
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-.icons_club h5 {
-    font-family: 'Arimo', sans-serif;
-    font-weight: 700;
-    font-size: 12pt;
-    color: white;
-    margin-top: 10px;
-}
-
-.icons_club p{
-    font-family: 'Arimo', sans-serif;
-    font-weight: 400;
-    font-size: 10pt;
-    color: white;
-    line-height: 1.2;
-    margin-top: 10px;
-}
-
-.icons_club .volunteers {
-    float: left;
-    margin-right: 20px;
-}
-
-.icons_club .materials {
-    float: left;
-    margin-right: 20px;
-}
-
-.icons_club .place {
-    float: left;
-    margin-right: 20px;
-}
-
-.icons_club .students {
-    float: left;
-    margin-right: 20px;
-}
-
-.icons_club .plus {
-    float: left;
-    margin-top: 20px;
-    margin-right: 20px;
-}
-
-#code_club_main .logo_club {
-    width: 22%; 
-    margin: auto
-}
-
-.logo_club #equals {
-    float: left;
-    margin-right: 15px;
-    margin-top: 40px;
-}
-
-#code_club_main .club_description {
-    font-family: 'Arimo', sans-serif;
-    font-weight: 400;
-    font-size: 12pt;
-    line-height: 1.2;
-    color: white;
-    padding-top: 50px;
-}
-
-.code_club_slide_icon {
-    width: 10%; 
-    margin: auto;
-    padding-top: 75px;
-    padding-bottom: 30px;
-}
-
-.code_club_slide h1 {
-    font-family: 'Arimo', sans-serif;
-    font-weight: 700;
-    font-size: 32pt;
-    text-align: center;
-    color: white;
-}
-
-.code_club_slide p {
-    font-family: 'Arimo', sans-serif;
-    font-weight: 400;
-    font-size: 12pt;
-    line-height: 1.2;
-    color: white;
-    padding-top: 30px;
-}
-
-.bulletpoints li {
-    list-style: circle;
-}
-
-/* Workshop section */
-#workshopsSection {
-    padding-top: 75px;
-    padding-bottom: 75px;
-}
-
-#workshopsSection ul li h1 {
-    font-family: 'Arimo', sans-serif;
-    font-weight: 700;
-    font-size: 48pt;
-    color: white;
-}
-
-#workshopsSection ul li h2 {
-    font-family: 'Arimo', sans-serif;
-    font-weight: 700;
-    font-size: 24pt;
-    color: white;
-    margin-bottom: 15px;
-    margin-top: 25px;
-}
-
-#workshopsSection ul li h3 {
-    font-family: 'Arimo', sans-serif;
-    font-weight: 400;
-    font-size: 24pt;
-    color: white;
-}
-
-#workshopsSection ul li h4 {
-    font-family: 'Arimo', sans-serif;
-    font-weight: 400;
-    font-size: 16pt;
-    line-height: 1.2;
-    color: white;
-    margin-top: 30px;
-}
-
-#workshopsSection ul li p {
-    font-family: 'Arimo', sans-serif;
-    font-weight: 400;
-    font-size: 12pt;
-    line-height: 1.2;
-    color: white;
-}
-
-#workshopsSection ul li .workshops_link {
-    margin-top: 30px;
-}
-
-/* Why section */
-
-#languageSection {
-    padding-top: 75px;
-    padding-bottom: 75px;
-}
-
-#languageSection h2 {
-    font-family: 'Arimo', sans-serif;
-    font-weight: 700;
-    font-size: 24pt;
-    color: white;
-    margin-bottom: 15px;
-    margin-top: 25px;
-}
-
-#languageSection ul li p {
-    font-family: 'Arimo', sans-serif;
-    font-weight: 400;
-    font-size: 12pt;
-    line-height: 1.2;
-    color: white;
-    margin-top: 25px;
-}
-
-#polandSection {
-    padding-top: 75px;
-    padding-bottom: 75px;
-}
-
-#polandSection p {
-    font-family: 'Arimo', sans-serif;
-    font-weight: 400;
-    font-size: 12pt;
-    line-height: 1.2;
-    color: white;
-    margin-top: 25px;
-}
-
-#polandSection .quote {
-    width: 500px;
-    font-family: 'Arimo', sans-serif;
-    font-weight: 400;
-    font-size: 11pt;
-    font-style: italic;
-    line-height: 1.4;
-    color: white;
-}
-
-#polandSection .author {
-    width: 500px;
-    font-family: 'Arimo', sans-serif;
-    font-weight: 700;
-    font-size: 11pt;
-    font-style: italic;
-    color: white;
-    margin-bottom: 75px;
-}
-
-#polandSection .right {
-    text-align: right;
-    margin-left: 400px;
-}
-
-#polandSection .left {
-    text-align: left;
-    margin-right: 460px;
-}
-
-#polandSection #bottom {
-    margin-top: 75px;
-}
-
-#consumptionSection {
-    padding-top: 75px;
-    padding-bottom: 75px;
-} 
-
-#consumptionSection p {
-    font-family: 'Arimo', sans-serif;
-    font-weight: 400;
-    font-size: 12pt;
-    line-height: 1.2;
-    color: white;
-    margin-top: 25px;
 }
