@@ -86,6 +86,10 @@ header nav li {
     padding-left: 50px;
 }
 
+a {
+    text-decoration:none;
+}
+
 nav li a {
     color: white;
     font-size: 16px;
@@ -100,6 +104,13 @@ nav li a:active {
 nav li a:hover {
     color: #7bcc3f;
     border-bottom: 1px solid #7bcc3f;
+}
+
+/*LEAKY ABSTRACTION*/
+
+.icons_online a:hover { /*Because this class was copy paste it is used in all sections*/
+    color: white;
+    text-shadow: 1px 1px 1px #B3B3B3;
 }
 
 /* INTRO SECTION */
@@ -155,6 +166,14 @@ nav li a:hover {
 }
 
 /* TEACH SECTION */
+
+.carousel-content {
+	width: 95%;
+    margin-left:  1.5em;
+    margin-right: 1.5em;
+}
+
+
 #teach {
     background-color: #FFFFFF
 }
@@ -463,15 +482,6 @@ ul.slides {
     padding-bottom: 25px;
 }
 
-.link a {
-    text-decoration:none;
-}
-
-.link a:hover {
-    color: white;
-    text-shadow: 1px 1px 1px #B3B3B3;
-}
-
 /* Learn online */
 #onlineSection {
     padding-top: 75px;
@@ -487,7 +497,6 @@ ul.slides {
     margin-left:  1.5em;
     margin-right: 1.5em;
 }
-
 
 .about_online h1 {
     font-family: 'Arimo', sans-serif;
@@ -771,7 +780,7 @@ ul.slides {
 
 #polandSection .right {
     text-align: right;
-    margin-left: 460px;
+    margin-left: 400px;
 }
 
 #polandSection .left {
