@@ -164,16 +164,14 @@ nav li a:hover {
     background-color: #ba5ca3;
 }
 
-/* ^^^^^ Learn online subsection ^^^^^ */
-#onlineSection {
+/* Carousel General Layout Settings  */
+
+.rn-carousel-container {
     padding-top: 75px;
     padding-bottom: 30px;
 }
 
-#groupSection {
-    padding-top: 75px;
-    padding-bottom: 30px;
-}
+/* ^^^^^ Learn online subsection ^^^^^ */
 
 .about_online {
     margin-left:  1.5em;
@@ -282,10 +280,6 @@ nav li a:hover {
 }
 
 /* ^^^^^ teach codeclubs subsection ^^^^^ */
-#clubSection {
-    padding-top: 75px;
-}
-
 .icons_club {
     float: left;
     margin-bottom: 30px;
@@ -358,7 +352,7 @@ nav li a:hover {
 .code_club_slide_icon {
     width: 10%; 
     margin: auto;
-    padding-top: 75px;
+    padding-top: 45px;
     padding-bottom: 30px;
 }
 
@@ -385,8 +379,7 @@ nav li a:hover {
 
 /* ^^^^^  teach workshops subsection ^^^^^ */
 #workshopsSection {
-    padding-top: 75px;
-    padding-bottom: 75px;
+    padding-bottom: 125px;
 }
 
 #workshopsSection ul li h1 {
@@ -756,7 +749,7 @@ div.learn, div.teach, div.why {
     position : absolute;
     top      : 0;
     width    : 100%;
-    z-index: 100;
+    z-index  : 100;
 }
 
 /* left animation */
