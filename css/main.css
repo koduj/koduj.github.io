@@ -330,7 +330,7 @@ nav li a:hover {
 }
 
 #code_club_main .logo_club {
-    width: 22%; 
+    width: 30%;
     margin: auto
 }
 
@@ -338,6 +338,10 @@ nav li a:hover {
     float: left;
     margin-right: 15px;
     margin-top: 40px;
+}
+
+.code_club_world_logo {
+    width: 180px;
 }
 
 #code_club_main .club_description {
@@ -350,7 +354,7 @@ nav li a:hover {
 }
 
 .code_club_slide_icon {
-    width: 10%; 
+    width: 17%;
     margin: auto;
     padding-top: 45px;
     padding-bottom: 30px;
