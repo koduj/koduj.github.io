@@ -559,14 +559,11 @@ nav li a:hover {
 /* ^^^^^^^^^^^^^ BE LIKE THEM SECTION ^^^^^^^^^^^^^ */
 #be_like_them {
     width: 100%;
-    height: 860px;
     background-image: url('../assets/background.png');
     background-repeat: repeat;
     padding-top: 110px;
-    padding-bottom: 50px;
 }
 #be_like_them main {
-    padding-bottom: 50px;
     text-align: center;
 }
 
@@ -580,8 +577,8 @@ nav li a:hover {
 
 #be_like_them .profile_info {
     width: 322px;
-    height: 194px;
     background-color: #8a9ca7;
+    padding-bottom: 25px;
 }
 
 #be_like_them .profile_info .name {
@@ -605,20 +602,18 @@ nav li a:hover {
 }
 
 #be_like_them .description .full_description {
-    width: 560px;
-    height: 290px;
+    width: 480px;
     border: solid 5px #8a9ca7;
     margin-top: 50px;
     margin-bottom: 25px;
-    margin-left: 50px;
+    margin-left: 25px;
     float: left;
 }
 
 #be_like_them .description .programming_benefits {
-    width: 560px;
-    height: 235px;
+    width: 480px;
     border: solid 5px #8a9ca7;
-    margin-left: 50px;
+    margin-left: 25px;
     float: left;
 }
 
