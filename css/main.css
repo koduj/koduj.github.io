@@ -793,3 +793,13 @@ ul.slides {
     padding-top: 25px;
     padding-bottom: 25px;
 }
+
+nav figure {
+    cursor: pointer;
+}
+
+section img.close {
+    cursor: pointer;
+    float: right;
+    margin-right: 15%;
+}
